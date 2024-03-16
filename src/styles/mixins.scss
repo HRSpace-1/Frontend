@@ -1,0 +1,29 @@
+// reset mixins
+
+@mixin reset-list {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin reset-text { // reset h1-h6, p
+  margin: 0;
+}
+
+@mixin reset-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+@mixin reset-button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@mixin reset-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}

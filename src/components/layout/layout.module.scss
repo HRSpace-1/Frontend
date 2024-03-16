@@ -1,0 +1,11 @@
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding-left: calc((100vw - 1260px) / 2);
+  padding-right: calc((100vw - 1260px) / 2);
+}
