@@ -2,6 +2,6 @@ import { Configuration } from 'webpack'
 
 export function buildResolvers(): Configuration['resolve'] {
   return {
-    extensions: ['.tsx', '.ts', '.jsx', '.js'],
+    extensions: ['.tsx', '.ts', '.jsx', '.js']
   }
 }
