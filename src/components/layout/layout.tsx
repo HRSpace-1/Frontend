@@ -6,7 +6,6 @@ const Layout: FC = () => {
   return (
     <div className={styles.app}>
       <main className={styles.main}>
-        <h1>QWERTY</h1>
         <Outlet />
       </main>
     </div>

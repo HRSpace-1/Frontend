@@ -1,0 +1,57 @@
+@import '../../styles/mixins.scss';
+
+.progressLine {
+  @include width-parent-block;
+  @include font-family;
+}
+
+.steps {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+}
+
+.stepImage {
+  width: 21px;
+  height: 21px;
+  margin-right: 10px;
+}
+
+.progressBar {
+  -webkit-appearance: none;
+  height: 6px;
+  border: 1px solid rgb(48, 50, 51);
+  border-radius: 12px;
+  // margin-top: 12px;
+  width: 100%;
+  // background: -webkit-linear-gradient(left, #303233 0%, #303233 41%, #BABDBF 41%, #BABDBF 100%);
+}
+
+.progressBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: -7px;
+  background-image: url('../../images/Rocket.svg');
+  background-color: rgba(0, 0, 0, 0);
+  margin-left: 10px;
+}
+
+.progressBar::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 6px;
+  border-radius: 12px;
+}
+
+// .progressBar {
+//   width: 100%;
+// }
+
+// .progressBarLine {
+//   width: 100%;
+// }
