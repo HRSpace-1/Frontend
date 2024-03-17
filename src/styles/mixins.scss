@@ -1,3 +1,4 @@
+@import './const.scss';
 // reset mixins
 
 @mixin reset-list {
@@ -28,19 +29,16 @@
   margin: 0;
 }
 
-@mixin margin-edge {
-  margin: 0 auto;
-}
-
-@mixin width-parent-block {
-  min-width: 1260px;
-}
-
-@mixin font-family {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @mixin text-header {
   font-size: 16px;
   line-height: 24px;
+}
+
+@mixin text-progress-bar {
+  $f-size: 18px;
+  font-weight: 700;
+  font-size: $f-size;
+  line-height: calc($f-size / 100 * 110);
+  letter-spacing: calc($f-size / 100 * 0);
+  color: $color-black;
 }

@@ -18,50 +18,53 @@ function ProgressLine() {
       setWidthActiveLine(0)
     }
     if (step === 2) {
-      setWidthActiveLine(520)
+      setWidthActiveLine(39.7)
     }
     if (step === 3) {
-      setWidthActiveLine(1037)
+      setWidthActiveLine(79)
+    }
+    if (step === 4) {
+      setWidthActiveLine(100)
     }
   }, [step])
 
   const widthStyle = {
-    width: `${widthActiveLine}px`
+    width: `${widthActiveLine}%`
   }
 
   return (
-    <div className={`${styles.progressLine}`}>
-      <div className={`${styles.steps}`}>
-        <div className={`${styles.step}`}>
+    <div className={styles.progressLine}>
+      <div className={styles.steps}>
+        <div className={styles.step}>
           {step > 1 ? (
-            <IconStepSuccess className={`${styles.stepImage}`} />
+            <IconStepSuccess className={styles.stepImage} />
           ) : (
-            <IconStep1 className={`${styles.stepImage}`} />
+            <IconStep1 className={styles.stepImage} />
           )}
-          <p className={`${styles.stepText}`}>Шаг 1: создание вакансии</p>
+          <p className={styles.stepText}>Шаг 1: Создание вакансии</p>
         </div>
-        <div className={`${styles.step}`}>
+        <div className={styles.step}>
           {step > 2 ? (
-            <IconStepSuccess className={`${styles.stepImage}`} />
+            <IconStepSuccess className={styles.stepImage} />
           ) : (
-            <IconStep2 className={`${styles.stepImage}`} />
+            <IconStep2 className={styles.stepImage} />
           )}
-          <p className={`${styles.stepText}`}>Шаг 2: создание вакансии</p>
+          <p className={styles.stepText}>Шаг 2: Создание вакансии</p>
         </div>
-        <div className={`${styles.step}`}>
+        <div className={styles.step}>
           {step > 3 ? (
-            <IconStepSuccess className={`${styles.stepImage}`} />
+            <IconStepSuccess className={styles.stepImage} />
           ) : (
-            <IconStep3 className={`${styles.stepImage}`} />
+            <IconStep3 className={styles.stepImage} />
           )}
-          <p className={`${styles.stepText}`}>Шаг 3: создание вакансии</p>
+          <p className={styles.stepText}>Шаг 3: Создание вакансии</p>
         </div>
       </div>
-      <div className={`${styles.progressBar}`}>
-        <div className={`${styles.progressBarActive}`} style={widthStyle}>
-          <IconRocketFire className={`${styles.iconRocketFire}`} />
+      <div className={styles.progressBar}>
+        <div className={styles.progressBarActive} style={widthStyle}>
+          <IconRocketFire className={styles.iconRocketFire} />
         </div>
-        <IconRocket className={`${styles.progressBarIcon}`} />
+        <IconRocket className={styles.progressBarIcon} />
       </div>
     </div>
   )

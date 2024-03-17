@@ -1,6 +1,5 @@
 @import '../../styles/mixins.scss';
 
 .main {
-  @include margin-edge;
-  
+  margin: 0 auto;
 }
