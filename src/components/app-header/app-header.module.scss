@@ -1,0 +1,94 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/const.scss';
+
+.header {
+  width: 100%;
+  min-height: 78px;
+  background-color: $color-bg-header;
+  color: $color-text-header;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  @include text-header;
+}
+
+.container {
+  max-width: 1280px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 58px;
+  box-sizing: border-box;
+  padding: 16px;
+  margin: 0 auto;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.logoIcon {
+  width: 138px;
+  height: 46px;
+  display: block;
+}
+
+.menu {
+  @include reset-list;
+  display: flex;
+  gap: 24px;
+  letter-spacing: .68px;
+}
+
+.link {
+  @include reset-link;
+}
+
+.tray {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.like {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.notification {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.profile {
+  @include reset-link;
+  display: flex;
+  align-items: center;
+  letter-spacing: .46px;
+}
+
+.avatar {
+  width: 100%;
+  display: block;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.name {
+  @include reset-text;
+  color: white;
+}
+
+.id {
+  @include reset-text;
+  font-size: 14px;
+  line-height: 20px;
+}

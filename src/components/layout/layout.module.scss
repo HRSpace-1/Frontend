@@ -1,4 +1,7 @@
+@import '../../styles/mixins.scss';
+
 .app {
+  @include font-family;
   display: flex;
   flex-direction: column;
 }

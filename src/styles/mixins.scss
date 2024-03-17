@@ -39,3 +39,8 @@
 @mixin font-family {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@mixin text-header {
+  font-size: 16px;
+  line-height: 24px;
+}
