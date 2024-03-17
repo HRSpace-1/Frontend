@@ -6,6 +6,8 @@ import { ProgressBarSlice } from '../../../services/slices/progress-bar-slice'
 import FinishPayInfo from '../../../components/finish-pay-info/finish-pay-info'
 import EmployeePayInput from '../../../components/employee-pay-input/employee-pay-input'
 import EmployeeNumber from '../../../components/employee-number/employee-number'
+import SchemeBlock from '../../../components/scheme-block/scheme-block'
+import ResultBlock from '../../../components/result-block/result-block'
 // import styles from './recuiter-pay-form.module.scss'
 
 function RecruiterPayForm() {
@@ -26,6 +28,8 @@ function RecruiterPayForm() {
           <EmployeeNumber />
         </div>
       </div>
+      <SchemeBlock />
+      <ResultBlock />
     </Form>
   )
 }

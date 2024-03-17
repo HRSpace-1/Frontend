@@ -1,0 +1,53 @@
+@import '../../styles/mixins.scss';
+
+.schemeBlock {
+  padding: 20px 16px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 7px 0px rgba(186, 189, 191, 0.25);
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.badgeBlock {
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  width: fit-content;
+  padding: 4px 8px;
+}
+
+.badgeBlockGreen {
+  background-color: rgba(75, 178, 78, 0.1);
+  color: rgb(56, 142, 60);
+}
+
+.badgeBlockOrange {
+  background-color: rgba(249, 146, 0, 0.1);
+  color: rgb(249, 146, 0);
+}
+
+.badgeBlockRed {
+  background-color: rgba(214, 0, 29, 0.1);
+  color: rgb(214, 0, 29);
+}
+
+.title {
+  @include reset-text;
+  color: rgb(48, 50, 51);
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 110%;
+  margin-bottom: 4px;
+}
+
+.text {
+  @include reset-text;
+  color: rgb(149, 151, 153);
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+}

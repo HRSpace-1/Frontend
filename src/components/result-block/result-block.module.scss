@@ -1,0 +1,28 @@
+@import '../../styles/mixins.scss';
+
+.resultBlock {
+  background-color: rgba(186, 189, 191, 0.1);
+  padding: 16px;
+  display: flex;
+  width: fit-content;
+  border-radius: 12px;
+}
+
+.text {
+  @include reset-text;
+  color: rgb(149, 151, 153);
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.endPrice {
+  margin-left: 4px;
+  @include reset-text;
+  color: rgb(48, 50, 51);
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 140%;
+}
