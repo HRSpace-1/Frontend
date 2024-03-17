@@ -6,23 +6,14 @@ import IconStepSuccess from '../../images/iconStepSuccess.svg'
 import IconRocket from '../../images/Rocket.svg'
 import IconRocketFire from '../../images/iconRocketFire.svg'
 import { useEffect, useState } from 'react'
-import { useAppDispatch, useAppSelector } from '../../services/hooks'
-import { ProgressBarSlice } from '../../services/slices/progress-bar-slice'
+import { useAppSelector } from '../../services/hooks'
 
 function ProgressLine() {
-  const dispatch = useAppDispatch()
   const [widthActiveLine, setWidthActiveLine] = useState(0)
 
   const { step } = useAppSelector(state => state.progressBar)
-  const [mok, setMok] = useState(2)
-
-  setTimeout(() => {
-    setMok(3)
-  }, 2000)
 
   useEffect(() => {
-    console.log(step)
-    dispatch(ProgressBarSlice.actions.changeProgressBarSlice(mok))
     if (step === 1) {
       setWidthActiveLine(0)
     }
@@ -32,7 +23,7 @@ function ProgressLine() {
     if (step === 3) {
       setWidthActiveLine(1037)
     }
-  }, [step, mok])
+  }, [step])
 
   const widthStyle = {
     width: `${widthActiveLine}px`
