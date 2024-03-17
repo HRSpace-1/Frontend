@@ -1,0 +1,11 @@
+@import '../../styles/mixins.scss';
+
+.schemeBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.badgeText {
+  @include reset-text;
+  margin-left: 5px;
+}

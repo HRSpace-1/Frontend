@@ -7,7 +7,8 @@
   list-style: none;
 }
 
-@mixin reset-text { // reset h1-h6, p
+@mixin reset-text {
+  // reset h1-h6, p
   margin: 0;
 }
 
@@ -41,4 +42,36 @@
   line-height: calc($f-size / 100 * 110);
   letter-spacing: calc($f-size / 100 * 0);
   color: $color-black;
+}
+
+@mixin font-family-form-title {
+  color: rgb(0, 0, 0);
+  font-family: Arial;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 116%;
+  letter-spacing: 0px;
+}
+
+@mixin font-family-form-subtitle {
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+
+@mixin font-family-form-text {
+  color: rgb(0, 0, 0);
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+
+@mixin style-input-block {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
 }
