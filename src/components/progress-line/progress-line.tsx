@@ -3,34 +3,39 @@ import IconStep1 from '../../images/iconStep1.svg'
 import IconStep3 from '../../images/iconStep3.svg'
 import IconStep2 from '../../images/iconStep2.svg'
 import IconStepSuccess from '../../images/iconStepSuccess.svg'
+import IconRocket from '../../images/Rocket.svg'
+import IconRocketFire from '../../images/iconRocketFire.svg'
 import { useEffect, useState } from 'react'
-import { useAppSelector } from '../../services/hooks'
+import { useAppDispatch, useAppSelector } from '../../services/hooks'
+import { ProgressBarSlice } from '../../services/slices/progress-bar-slice'
 
 function ProgressLine() {
-  const [inputValue, setInputValue] = useState(0)
+  const dispatch = useAppDispatch()
   const [widthActiveLine, setWidthActiveLine] = useState(0)
 
   const { step } = useAppSelector(state => state.progressBar)
+  const [mok, setMok] = useState(2)
+
+  setTimeout(() => {
+    setMok(3)
+  }, 2000)
 
   useEffect(() => {
+    console.log(step)
+    dispatch(ProgressBarSlice.actions.changeProgressBarSlice(mok))
     if (step === 1) {
-      setInputValue(0)
       setWidthActiveLine(0)
     }
     if (step === 2) {
-      const progress = (100 / 300) * 123
-      setInputValue(125)
-      setWidthActiveLine(progress)
+      setWidthActiveLine(520)
     }
     if (step === 3) {
-      const progress = (100 / 300) * 247
-      setInputValue(251)
-      setWidthActiveLine(progress)
+      setWidthActiveLine(1037)
     }
-  }, [step])
+  }, [step, mok])
 
-  const backgroundStyle = {
-    background: `-webkit-linear-gradient(left, #303233 0%, #303233 ${widthActiveLine}%, #BABDBF ${widthActiveLine}%, #BABDBF 100%)`
+  const widthStyle = {
+    width: `${widthActiveLine}px`
   }
 
   return (
@@ -61,14 +66,12 @@ function ProgressLine() {
           <p className={`${styles.stepText}`}>Шаг 3: создание вакансии</p>
         </div>
       </div>
-      <input
-        className={`${styles.progressBar}`}
-        type='range'
-        min={0}
-        max={300}
-        value={inputValue}
-        style={backgroundStyle}
-      />
+      <div className={`${styles.progressBar}`}>
+        <div className={`${styles.progressBarActive}`} style={widthStyle}>
+          <IconRocketFire className={`${styles.iconRocketFire}`} />
+        </div>
+        <IconRocket className={`${styles.progressBarIcon}`} />
+      </div>
     </div>
   )
 }

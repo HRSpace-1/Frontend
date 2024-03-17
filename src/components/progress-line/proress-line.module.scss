@@ -23,24 +23,30 @@
 }
 
 .progressBar {
-  -webkit-appearance: none;
-  height: 6px;
-  border: 1px solid rgb(48, 50, 51);
-  border-radius: 12px;
+  display: flex;
   width: 100%;
+  background-color: rgb(186, 189, 191);
+  max-height: 8px;
+  align-items: center;
+  border-radius: 24px;
 }
 
-.progressBar::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  margin-top: -7px;
-  background-image: url('../../images/Rocket.svg');
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.progressBar::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  height: 6px;
+.progressBarActive {
+  background-color: black;
+  height: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   border-radius: 12px;
+  transition: .8s ease-in-out;
+}
+
+.progressBarIcon {
+  height: 20px;
+  width: 20px;
+}
+
+.iconRocketFire {
+  width: 6px;
+  height: 4px;
 }

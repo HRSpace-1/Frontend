@@ -5,7 +5,7 @@ interface IProgressBarState {
 }
 
 const initialState: IProgressBarState = {
-  step: 2
+  step: 1
 }
 
 export const ProgressBarSlice = createSlice({
