@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 import Layout from '../layout/layout'
 import Main from '../../pages/main/main'
-import RecruiterPayForm from '../../pages/main/recruiter-pay-form/recruiter-pay-form'
+import RecruiterPayForm from '../../pages/recruiter-pay-form/recruiter-pay-form'
 
 export default function App() {
   return (
