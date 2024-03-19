@@ -1,4 +1,5 @@
 @import './const.scss';
+
 // reset mixins
 
 @mixin reset-list {
@@ -8,7 +9,6 @@
 }
 
 @mixin reset-text {
-  // reset h1-h6, p
   margin: 0;
 }
 
@@ -30,48 +30,73 @@
   margin: 0;
 }
 
-@mixin text-header {
-  font-size: 16px;
-  line-height: 24px;
+// text style mixins
+
+@mixin text-for-all {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0px;
+}
+
+@mixin text-bold-18-700 {
+  @include text-for-all;
+  $f-size: 18px;
+  font-size: $f-size;
+  font-weight: 700;
+  line-height: calc($f-size / 100 * 110);
+}
+
+@mixin text-regular-16-400 {
+  @include text-for-all;
+  $f-size: 16px;
+  font-size: $f-size;
+  font-weight: 400;
+  line-height: calc($f-size / 100 * 150);
+}
+
+@mixin text-regular-14-400 {
+  @include text-for-all;
+  $f-size: 14px;
+  font-size: $f-size;
+  font-weight: 400;
+  line-height: calc($f-size / 100 * 140);
+}
+
+@mixin text-tiny-12-400 {
+  @include text-for-all;
+  $f-size: 12px;
+  font-size: $f-size;
+  font-weight: 400;
+  line-height: calc($f-size / 100 * 134);
 }
 
 @mixin text-progress-bar {
-  $f-size: 18px;
-  font-weight: 700;
-  font-size: $f-size;
-  line-height: calc($f-size / 100 * 110);
-  letter-spacing: calc($f-size / 100 * 0);
+  @include text-bold-18-700;
   color: $color-black;
 }
 
-@mixin font-family-form-title {
-  color: rgb(0, 0, 0);
-  font-family: Arial;
-  font-size: 24px;
+@mixin text-form-title {
+  @include text-for-all;
+  $f-size: 24px;
+  font-size: $f-size;
   font-weight: 700;
-  line-height: 116%;
-  letter-spacing: 0px;
+  line-height: calc($f-size / 100 * 116);
 }
 
-@mixin font-family-form-subtitle {
-  font-family: Arial;
-  font-size: 16px;
+@mixin text-form-subtitle {
+  @include text-for-all;
+  $f-size: 16px;
+  font-size: $f-size;
   font-weight: 700;
-  line-height: 140%;
-  letter-spacing: 0px;
+  line-height: calc($f-size / 100 * 140);
 }
 
-@mixin font-family-form-text {
-  color: rgb(0, 0, 0);
-  font-family: Arial;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 140%;
-  letter-spacing: 0px;
+@mixin text-selected-card {
+  @include text-form-title;
 }
 
 @mixin style-input-block {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
+  padding-top: 24px;
 }

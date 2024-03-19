@@ -1,13 +1,9 @@
 @import '../../styles/mixins.scss';
 
-.employeeNumber {
-  margin-left: 56px;
-}
-
 .container {
   display: flex;
   justify-content: space-between;
-  padding: 12px 16px;
+  padding: 9px;
   align-items: center;
   border-radius: 8px;
   background-color: rgb(255, 255, 255);
@@ -16,7 +12,7 @@
 }
 
 .countButton {
-  @include font-family-form-text;
+  @include text-regular-14-400;
   display: flex;
   justify-content: center;
   align-items: center;

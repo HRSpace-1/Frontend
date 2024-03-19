@@ -6,15 +6,16 @@
 
 .container {
   display: flex;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .title {
   @include reset-text;
-  @include font-family-form-subtitle;
+  @include text-form-subtitle;
 }
 
 .star {
   @include reset-text;
-  color: rgb(214, 0, 29);
+  color: $color-red;
+  margin-left: 8px;
 }

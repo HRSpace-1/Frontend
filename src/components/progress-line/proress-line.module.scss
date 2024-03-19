@@ -4,7 +4,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 12px;
 }
 
 .steps {
@@ -36,6 +36,7 @@
   max-height: 8px;
   align-items: center;
   border-radius: 24px;
+  margin: 6px 0;
 }
 
 .progressBarActive {

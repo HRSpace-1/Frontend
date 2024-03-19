@@ -11,7 +11,7 @@ const Form: FC<IForm> = ({ title, children }) => {
     <div className={styles.formBlock}>
       <div className={styles.sidebar}></div>
       <form className={styles.form}>
-        <h2 className={styles.title}>{title}</h2>
+        <h1 className={styles.title}>{title}</h1>
         {children}
       </form>
     </div>

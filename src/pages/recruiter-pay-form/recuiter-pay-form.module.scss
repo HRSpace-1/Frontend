@@ -1,11 +1,14 @@
-.recruiterPayBlock {
-
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 56px;
 }
 
 .employeePayInput {
-  max-width: 477px;
+  flex: 1;
 }
 
-.container {
-  display: flex;
+.employeeNumber {
+  max-width: 188px;
+  width: 100%;
 }

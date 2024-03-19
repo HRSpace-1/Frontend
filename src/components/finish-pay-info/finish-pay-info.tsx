@@ -4,15 +4,15 @@ import style from './finish-pay-info.module.scss'
 
 function FinishPayInfo() {
   return (
-    <InputBlock title={'Из чего складывается итоговоая сумма'}>
+    <InputBlock title={'Из чего складывается итоговая сумма'}>
       <div className={style.finishPayInfo}>
         <FormInfoCard
-          title='Оплата за  сотрудника'
+          title='Оплата за сотрудника'
           text='Рекомендуемая сумма — среднемесячный доход кандидата и выше'
         />
         <FormInfoCard
           title='Количество сотрудников'
-          text='Оплата взывается за каждого, вышедшего сотрудника '
+          text='Оплата взывается за каждого, вышедшего сотрудника'
         />
         <FormInfoCard
           title='Комиссия HRspace 20%'

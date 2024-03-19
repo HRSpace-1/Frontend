@@ -6,10 +6,10 @@
   min-height: 78px;
   background-color: $color-bg-header;
   color: $color-text-header;
+  @include text-regular-16-400;
   position: sticky;
   top: 0;
   z-index: 10;
-  @include text-header;
 }
 
 .container {

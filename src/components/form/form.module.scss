@@ -2,19 +2,23 @@
 
 .formBlock {
   display: flex;
-  margin-top: 32px;
+  align-items: flex-start;
+  gap: 36px;
 }
 
 .sidebar {
-  min-height: 100%;
-  background-color: rgb(48, 50, 51);
   min-width: 504px;
+  min-height: 804px;
+  background-color: rgb(48, 50, 51);
   border-radius: 12px;
-  opacity: 0.5;
-  margin-right: 39px;
+  opacity: .5;
+}
+
+.form {
+  flex: 1;
 }
 
 .title {
   @include reset-text;
-  @include font-family-form-title
+  @include text-form-title;
 }
