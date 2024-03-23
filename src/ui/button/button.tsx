@@ -19,21 +19,21 @@ const Button: FC<IButton> = ({ title, action = '', style, step }) => {
 
     if (action === 'back') {
       if (step === 2) {
-        navigate('/main/vacancy')
+        navigate('/vacancy')
       }
 
       if (step === 3) {
-        navigate('/main/recruter-pay')
+        navigate('/recruter-pay')
       }
     }
 
     if (action === 'forward') {
       if (step === 1) {
-        navigate('/main/recruter-pay')
+        navigate('/recruter-pay')
       }
 
       if (step === 2) {
-        navigate('/main/conditions')
+        navigate('/conditions')
       }
     }
   }
