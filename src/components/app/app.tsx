@@ -1,10 +1,17 @@
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import Layout from '../layout/layout'
 import RecruiterPayForm from '../../pages/recruiter-pay-form/recruiter-pay-form'
 import JobCreateForm from '../../pages/job-create-form/job-create-form'
 import ConditionsForm from '../../pages/conditions-form/conditions-form'
+import { useEffect } from 'react'
 
 export default function App() {
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    navigate('/recruter-pay')
+  }, [])
+
   return (
     <Routes>
       <Route path='/' element={<Layout />}>
