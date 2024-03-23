@@ -3,9 +3,24 @@
 .schemeBlock {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-top: -8px;
+}
+
+.badgeIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+
+  & * {
+    width: 14px;
+    height: 14px;
+    fill: inherit;
+  }
 }
 
 .badgeText {
   @include reset-text;
-  margin-left: 5px;
+  @include text-tiny-12-400;
+  color: inherit;
 }

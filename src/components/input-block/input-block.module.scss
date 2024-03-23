@@ -1,7 +1,8 @@
 @import '../../styles/mixins.scss';
 
 .inputBlock {
-  @include style-input-block;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -16,6 +17,6 @@
 
 .star {
   @include reset-text;
-  color: $color-red;
+  color: $color-primary-red;
   margin-left: 8px;
 }

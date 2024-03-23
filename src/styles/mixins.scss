@@ -94,9 +94,3 @@
 @mixin text-selected-card {
   @include text-form-title;
 }
-
-@mixin style-input-block {
-  display: flex;
-  flex-direction: column;
-  padding-top: 24px;
-}

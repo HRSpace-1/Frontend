@@ -27,7 +27,7 @@ const SchemeCard: FC<ISchemeCard> = ({ title, text, children, type }) => {
     <div className={styles.schemeBlock}>
       <div className={`${styles.badgeBlock} ${badgeClassName}`}>{children}</div>
       <div className={styles.infoBlock}>
-        <h4 className={styles.title}>{title}</h4>
+        <h3 className={styles.title}>{title}</h3>
         <p className={styles.text}>{text}</p>
       </div>
     </div>

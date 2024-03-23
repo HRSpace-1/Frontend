@@ -1,14 +1,14 @@
 import InputBlock from '../input-block/input-block'
+import Input from '../../ui/input/input'
 import styles from './employee-pay-input.module.scss'
 
 function EmployeePayInput() {
   return (
     <InputBlock title='Вознаграждение за одного сотрудника' requred>
       <div className={styles.container}>
-        <input
-          className={styles.inputPrice}
-          type='text'
+        <Input
           placeholder='Другая сумма оплаты'
+          extraClass={styles.inputPrice}
         />
         <button className={styles.defaultPrice}>155 000 ₽</button>
       </div>

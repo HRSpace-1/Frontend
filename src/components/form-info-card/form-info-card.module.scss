@@ -1,10 +1,12 @@
 @import '../../styles/mixins.scss';
+@import '../../styles/const.scss';
 
 .infoCard {
   background-color: rgba($color-bg-info-card, .1);
   border-radius: 12px;
   padding: 20px 16px;
   transition: .3s;
+  position: relative;
 
   &:hover {
     cursor: pointer;
@@ -13,12 +15,45 @@
   }
 }
 
+.active {
+  background-color: $color-secondary-blue;
+  color: $color-primary-blue;
+  padding-top: 30px;
+
+  .title {
+    display: none;
+  }
+
+  .icon {
+    fill: $color-primary-blue;
+  }
+}
+
 .title, .text {
   @include reset-text;
   @include text-regular-14-400;
+  color: inherit;
 }
 
 .title {
   font-weight: 700;
   margin-bottom: 4px;
+}
+
+.info {
+  @include reset-button;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+  display: block;
+  fill: $color-secondary-gray;
+
+  & * {
+    fill: inherit;
+  }
 }

@@ -1,0 +1,44 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/const.scss';
+
+.button {
+  @include reset-button;
+  @include text-regular-16-400;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.primary {
+  background-color: $color-primary-blue;
+  color: white;
+
+  & * {
+    fill: white;
+  }
+}
+
+.secondary {
+  background-color: $color-secondary-blue;
+  color: $color-accent-blue;
+
+  & * {
+    fill: $color-accent-blue;
+  }
+}
+
+.icon * {
+  width: 14px;
+  height: 10px;
+  color: inherit;
+}
+
+.back {
+  margin-right: 8px;
+}
+
+.forward {
+  margin-left: 8px;
+}

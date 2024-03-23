@@ -1,28 +1,27 @@
 @import '../../styles/mixins.scss';
 
+.container {
+  margin-top: -8px;
+}
+
 .resultBlock {
-  background-color: rgba(186, 189, 191, 0.1);
-  padding: 16px;
-  display: flex;
   width: fit-content;
+  display: flex;
+  padding: 16px;
   border-radius: 12px;
+  background-color: rgba($color-secondary-gray, .1);
 }
 
 .text {
   @include reset-text;
-  color: rgb(149, 151, 153);
-  font-family: Arial;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 140%;
+  @include text-regular-14-400;
+  color: $color-primary-gray;
 }
 
 .endPrice {
-  margin-left: 4px;
   @include reset-text;
-  color: rgb(48, 50, 51);
-  font-family: Arial;
-  font-size: 14px;
+  @include text-regular-14-400;
   font-weight: 700;
-  line-height: 140%;
+  color: $color-black;
+  margin-left: 8px;
 }

@@ -1,11 +1,11 @@
 .container {
   display: flex;
-  justify-content: space-between;
-  gap: 56px;
+  gap: 48px;
 }
 
 .employeePayInput {
-  flex: 1;
+  max-width: 330px;
+  width: 100%;
 }
 
 .employeeNumber {

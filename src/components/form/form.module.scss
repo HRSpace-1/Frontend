@@ -2,23 +2,30 @@
 
 .formBlock {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 36px;
 }
 
 .sidebar {
   min-width: 504px;
   min-height: 804px;
-  background-color: rgb(48, 50, 51);
+  background: url('../../images/content/step2-info.svg') top center / contain no-repeat;
   border-radius: 12px;
-  opacity: .5;
 }
 
 .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   flex: 1;
 }
 
 .title {
   @include reset-text;
   @include text-form-title;
+  padding-bottom: 4px;
+}
+
+.buttonPanel {
+  margin-top: auto;
 }

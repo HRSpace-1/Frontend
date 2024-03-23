@@ -1,12 +1,12 @@
-import styles from './proress-line.module.scss'
-import IconStep1 from '../../images/iconStep1.svg'
-import IconStep3 from '../../images/iconStep3.svg'
-import IconStep2 from '../../images/iconStep2.svg'
-import IconStepSuccess from '../../images/iconStepSuccess.svg'
-import IconRocket from '../../images/Rocket.svg'
-import IconRocketFire from '../../images/iconRocketFire.svg'
 import { useEffect, useState } from 'react'
 import { useAppSelector } from '../../services/hooks'
+import IconStep1 from '../../images/icons/step1.svg'
+import IconStep2 from '../../images/icons/step2.svg'
+import IconStep3 from '../../images/icons/step3.svg'
+import IconStepSuccess from '../../images/icons/step-success.svg'
+import IconRocket from '../../images/icons/rocket.svg'
+import IconRocketFire from '../../images/icons/rocket-fire.svg'
+import styles from './proress-line.module.scss'
 
 function ProgressLine() {
   const [widthActiveLine, setWidthActiveLine] = useState(0)

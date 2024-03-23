@@ -1,31 +1,42 @@
 @import '../../styles/mixins.scss';
 
 .container {
+  height: 40px;
   display: flex;
-  justify-content: space-between;
-  padding: 9px;
   align-items: center;
-  border-radius: 8px;
-  background-color: rgb(255, 255, 255);
+  justify-content: space-between;
   box-sizing: border-box;
-  border: 1px solid rgb(186, 189, 191);
+  padding: 3px;
+  border: 1px solid $color-secondary-gray;
+  border-radius: 8px;
+  background-color: white;
 }
 
 .countButton {
-  @include text-regular-14-400;
+  width: 32px;
+  height: 32px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-width: 16px;
-  min-height: 16px;
+  justify-content: center;
+  padding: 0;
   border: none;
-  background-color: rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  background-color: transparent;
+
+  & * {
+    width: 14px;
+    height: 14px;
+    fill: $color-secondary-gray;
+  }
 
   &:hover {
     cursor: pointer;
+    background-color: $color-secondary-blue;
   }
 }
 
 .count {
   @include reset-text;
+  @include text-regular-14-400;
+  color: $color-black;
 }
