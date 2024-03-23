@@ -2,26 +2,36 @@ import { FC } from 'react'
 import Button from '../../ui/button/button'
 import styles from './button-panel.module.scss'
 
-const ButtonPanel: FC = () => {
-  const isStep1 = false
-  const isStep3 = false
+interface IButtonPanel {
+  step: number
+}
 
+const ButtonPanel: FC<IButtonPanel> = ({ step }) => {
   return (
     <div className={styles.container}>
-      {!isStep1 && (
+      {step === 2 && (
         <div className={styles.optionalButtons}>
-          <Button title='Назад' action='back' style='secondary' />
-          <Button title='Сохранить в черновик' style='secondary' />
+          <Button title='Назад' action='back' style='secondary' step={step} />
         </div>
       )}
-      {isStep3 ? (
-        <Button
-          title='Перейти к оплате и публикации'
-          action='submit'
-          style='primary'
-        />
+      {step === 3 ? (
+        <div className={styles.optionalButtons}>
+          <Button title='Назад' action='back' style='secondary' step={step} />
+          <Button title='Сохранить в черновик' style='secondary' step={step} />
+          <Button
+            title='Перейти к оплате и публикации'
+            action='submit'
+            style='primary'
+            step={step}
+          />
+        </div>
       ) : (
-        <Button title='Продолжить' action='forward' style='primary' />
+        <Button
+          title='Продолжить'
+          action='forward'
+          style='primary'
+          step={step}
+        />
       )}
     </div>
   )
