@@ -1,5 +1,19 @@
-$color-bg-header: #222324;
-$color-text-header: #959799;
+// colors constants
+
 $color-black: #303233;
-$color-red: #d6001d;
-$color-bg-info-card: #babdbf;
+$color-primary-gray: #959799;
+$color-secondary-gray: #babdbf;
+$color-primary-blue: #1785e5;
+$color-secondary-blue: #e8f4ff;
+$color-accent-blue: #61aef2;
+$color-primary-green: #388e3c;
+$color-secondary-green: rgba(#4bb24e, .1);
+$color-primary-orange: #f99200;
+$color-secondary-orange: rgba(#f99100, .1);
+$color-primary-red: #d6001d;
+$color-secondary-red: rgba(#d6001d, .1);
+
+$color-bg-header: #222324;
+$color-text-header: $color-primary-gray;
+$color-status-done: #4bb24e;
+$color-bg-info-card: $color-secondary-gray;

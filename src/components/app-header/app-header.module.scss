@@ -5,8 +5,8 @@
   width: 100%;
   min-height: 78px;
   background-color: $color-bg-header;
-  color: $color-text-header;
   @include text-regular-16-400;
+  color: $color-text-header;
   position: sticky;
   top: 0;
   z-index: 10;

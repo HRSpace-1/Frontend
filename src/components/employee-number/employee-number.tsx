@@ -1,7 +1,7 @@
 import InputBlock from '../input-block/input-block'
 import styles from './employee-number.module.scss'
-import IconPlus from '../../images/iconPlus.svg'
-import IconMinus from '../../images/iconMinus.svg'
+import IconPlus from '../../images/icons/plus.svg'
+import IconMinus from '../../images/icons/minus.svg'
 import { useState } from 'react'
 
 function EmployeeNumber() {
@@ -24,12 +24,12 @@ function EmployeeNumber() {
     <div className={`${styles.employeeNumber}`}>
       <InputBlock title='Сколько сотрудников' requred>
         <div className={styles.container}>
-          <button className={styles.countButton} onClick={increment}>
-            <IconPlus />
-          </button>
-          <p className={styles.count}>{count}</p>
           <button className={styles.countButton} onClick={decrement}>
             <IconMinus />
+          </button>
+          <p className={styles.count}>{count}</p>
+          <button className={styles.countButton} onClick={increment}>
+            <IconPlus />
           </button>
         </div>
       </InputBlock>

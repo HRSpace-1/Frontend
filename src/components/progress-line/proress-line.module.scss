@@ -1,4 +1,5 @@
 @import '../../styles/mixins.scss';
+@import '../../styles/const.scss';
 
 .progressLine {
   width: 100%;
@@ -32,7 +33,7 @@
 .progressBar {
   display: flex;
   width: 100%;
-  background-color: rgb(186, 189, 191);
+  background-color: $color-secondary-gray;
   max-height: 8px;
   align-items: center;
   border-radius: 24px;
@@ -40,7 +41,7 @@
 }
 
 .progressBarActive {
-  background-color: black;
+  background-color: $color-primary-blue;
   height: 8px;
   display: flex;
   align-items: center;
@@ -52,9 +53,18 @@
 .progressBarIcon {
   height: 20px;
   width: 20px;
+
+  & * {
+    fill: $color-primary-blue;
+  }
 }
 
 .iconRocketFire {
   width: 6px;
   height: 4px;
+  padding-right: 2px;
+
+  & * {
+    fill: white;
+  }
 }

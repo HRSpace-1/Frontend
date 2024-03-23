@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import ButtonPanel from '../button-panel/button-panel'
 import styles from './form.module.scss'
 
 interface IForm {
@@ -13,6 +14,9 @@ const Form: FC<IForm> = ({ title, children }) => {
       <form className={styles.form}>
         <h1 className={styles.title}>{title}</h1>
         {children}
+        <div className={styles.buttonPanel}>
+          <ButtonPanel />
+        </div>
       </form>
     </div>
   )

@@ -17,6 +17,7 @@ function FinishPayInfo() {
         <FormInfoCard
           title='Комиссия HRspace 20%'
           text='Удерживается из оплаты за каждого вышедшего сотрудника'
+          info={true}
         />
       </div>
     </InputBlock>
