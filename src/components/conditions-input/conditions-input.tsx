@@ -22,6 +22,7 @@ const ConditionsInput: FC<IPropsButtons> = ({ addValue }) => {
           activeChips={activeChips}
           some={true}
           id={1}
+          type={type}
         />
         <Chip
           title='фитнес'
