@@ -10,6 +10,8 @@ import EmployeeNumber from '../../components/employee-number/employee-number'
 import SchemeBlock from '../../components/scheme-block/scheme-block'
 import ResultBlock from '../../components/result-block/result-block'
 
+import Chip from '../../ui/сhip/сhip'
+
 function RecruiterPayForm() {
   const { step } = useAppSelector(state => state.progressBar)
   const dispatch = useAppDispatch()
