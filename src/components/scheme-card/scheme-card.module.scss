@@ -7,6 +7,8 @@
 
 .radio:checked + .schemeBlock {
   background: linear-gradient(136deg, #2dc0ff 0%, #4348b8 100%);
+  pointer-events: none;
+  position: relative;
 
   .badgeBlock {
     background-color: white;
@@ -50,6 +52,18 @@
     .title {
       @include text-form-title;
     }
+  }
+}
+
+.checked {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 13px;
+  right: 17.5px;
+
+  & * {
+    fill: white;
   }
 }
 

@@ -1,4 +1,5 @@
 import { FC, ChangeEvent, useEffect, useState } from 'react'
+import IconChecked from '../../images/icons/done-active.svg'
 import styles from './scheme-card.module.scss'
 
 interface ISchemeCard {
@@ -23,9 +24,6 @@ const SchemeCard: FC<ISchemeCard> = ({
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSelectedCard(event.currentTarget.value)
-    console.log('selectedCard: ', selectedCard)
-    console.log('currentTarget: ', event.currentTarget.value)
-    console.log('target: ', event.target.value)
   }
 
   useEffect(() => {
@@ -50,6 +48,7 @@ const SchemeCard: FC<ISchemeCard> = ({
         onChange={handleChange}
       />
       <div className={styles.schemeBlock}>
+        {isSelected(type) && <IconChecked className={styles.checked} />}
         <div className={`${styles.badgeBlock} ${badgeClassName}`}>
           {children}
         </div>
