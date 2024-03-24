@@ -18,10 +18,10 @@ function ProgressLine() {
       setWidthActiveLine(0)
     }
     if (step === 2) {
-      setWidthActiveLine(39.7)
+      setWidthActiveLine(34.7)
     }
     if (step === 3) {
-      setWidthActiveLine(79)
+      setWidthActiveLine(75.2)
     }
     if (step === 4) {
       setWidthActiveLine(100)
@@ -49,7 +49,7 @@ function ProgressLine() {
           ) : (
             <IconStep2 className={styles.stepImage} />
           )}
-          <p className={styles.stepText}>Шаг 2: Создание вакансии</p>
+          <p className={styles.stepText}>Шаг 2: Вознаграждение рекрутера</p>
         </div>
         <div className={styles.step}>
           {step > 3 ? (
@@ -57,7 +57,7 @@ function ProgressLine() {
           ) : (
             <IconStep3 className={styles.stepImage} />
           )}
-          <p className={styles.stepText}>Шаг 3: Создание вакансии</p>
+          <p className={styles.stepText}>Шаг 3: Условия сотрудничества</p>
         </div>
       </div>
       <div className={styles.progressBar}>

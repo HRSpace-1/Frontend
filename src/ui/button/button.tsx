@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import IconChat from '../../images/icons/chat.svg'
 import IconBack from '../../images/icons/back.svg'
 import IconForward from '../../images/icons/forward.svg'
 import styles from './button.module.scss'
@@ -6,9 +7,9 @@ import { useNavigate } from 'react-router'
 
 interface IButton {
   title: string
-  action?: 'back' | 'forward' | 'submit'
-  style: 'primary' | 'secondary'
-  step: number
+  action?: 'back' | 'forward' | 'submit' | 'chat'
+  style: 'primary' | 'secondary' | 'chat'
+  step?: number
 }
 
 const Button: FC<IButton> = ({ title, action = '', style, step }) => {
@@ -23,13 +24,13 @@ const Button: FC<IButton> = ({ title, action = '', style, step }) => {
       }
 
       if (step === 3) {
-        navigate('/recruter-pay')
+        navigate('/recruiter-pay')
       }
     }
 
     if (action === 'forward') {
       if (step === 1) {
-        navigate('/recruter-pay')
+        navigate('/recruiter-pay')
       }
 
       if (step === 2) {
@@ -44,12 +45,13 @@ const Button: FC<IButton> = ({ title, action = '', style, step }) => {
       className={`${styles.button} ${styles[style]}`}
       onClick={clickButton}
     >
+      {action === 'chat' && <IconChat className={styles.chatIcon} />}
       {action === 'back' && (
-        <IconBack className={`${styles.icon} ${styles.back}`} />
+        <IconBack className={`${styles.icon} ${styles.backIcon}`} />
       )}
       {title}
       {action === 'forward' && (
-        <IconForward className={`${styles.icon} ${styles.forward}`} />
+        <IconForward className={`${styles.icon} ${styles.forwardIcon}`} />
       )}
     </button>
   )

@@ -1,9 +1,9 @@
 import InputBlock from '../input-block/input-block'
 import SchemeCard from '../scheme-card/scheme-card'
-import styles from './scheme-block.module.scss'
 import IconBadgeSmileGreen from '../../images/icons/badge-face-happy.svg'
 import IconBadgeSmileOrange from '../../images/icons/badge-face-smile.svg'
 import IconBadgeSmileRed from '../../images/icons/badge-face-neutral.svg'
+import styles from './scheme-block.module.scss'
 
 function SchemeBlock() {
   return (

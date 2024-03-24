@@ -1,18 +1,5 @@
 @import '../../styles/mixins.scss';
 
-.formBlock {
-  display: flex;
-  align-items: stretch;
-  gap: 36px;
-}
-
-.sidebar {
-  min-width: 504px;
-  min-height: 804px;
-  background: url('../../images/content/step2-info.svg') top center / contain no-repeat;
-  border-radius: 12px;
-}
-
 .form {
   display: flex;
   flex-direction: column;

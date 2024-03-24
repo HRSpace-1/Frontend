@@ -1,3 +1,9 @@
+.page {
+  display: flex;
+  align-items: stretch;
+  gap: 36px;
+}
+
 .container {
   display: flex;
   gap: 48px;

@@ -20,7 +20,7 @@
   }
 }
 
-.secondary {
+.secondary, .chat {
   background-color: $color-secondary-blue;
   color: $color-accent-blue;
 
@@ -29,16 +29,30 @@
   }
 }
 
+.chat {
+  @include text-regular-14-400;
+  color: $color-accent-blue;
+  padding: 9.5px 14.5px;
+  border: 1px solid $color-accent-blue;
+}
+
+.chatIcon {
+  width: 14px;
+  height: 14px;
+  color: inherit;
+  margin-right: 8px;
+}
+
 .icon * {
   width: 14px;
   height: 10px;
   color: inherit;
 }
 
-.back {
+.backIcon {
   margin-right: 8px;
 }
 
-.forward {
+.forwardIcon {
   margin-left: 8px;
 }

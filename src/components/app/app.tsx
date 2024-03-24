@@ -9,7 +9,7 @@ export default function App() {
     <Routes>
       <Route path='/' element={<Layout />}>
         <Route path='vacancy' element={<JobCreateForm />} />
-        <Route path='recruter-pay' element={<RecruiterPayForm />} />
+        <Route path='recruiter-pay' element={<RecruiterPayForm />} />
         <Route path='conditions' element={<ConditionsForm />} />
       </Route>
     </Routes>
