@@ -8,11 +8,7 @@ interface IChip {
   type?: 'primary' | 'secondary'
 }
 
-const Chip: FC<IChip> = ({ title, name }) => {
-  function click() {
-    console.log(name)
-  }
-const Chip: FC<IChip> = ({ title, type = 'primary' }) => {
+const Chip: FC<IChip> = ({ title, type = 'primary', name }) => {
   const [isActive, setActive] = useState(false)
   const isPrimary = type === 'primary'
 
@@ -29,15 +25,6 @@ const Chip: FC<IChip> = ({ title, type = 'primary' }) => {
     <button type='button' className={styles.chip} name={name} onClick={click}>
       {title}
     </button>
-    <div
-      className={`${styles.chip} ${isPrimary ? styles.primary : styles.secondary} ${isActive && styles[`${type}Active`]}`}
-      onClick={handleClick}
-    >
-      <p className={styles.text}>{title}</p>
-      {isActive && isPrimary && (
-        <IconClose className={styles.close} onClick={handleDelete} />
-      )}
-    </div>
   )
 }
 export default Chip
