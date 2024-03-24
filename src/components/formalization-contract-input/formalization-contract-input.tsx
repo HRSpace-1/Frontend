@@ -16,7 +16,7 @@ const FormalizationContractInput: FC<IPropsButtons> = ({ addValue }) => {
     console.log(addValue)
   }, [])
   return (
-    <InputBlock title='Оформление'>
+    <InputBlock title='Оформление' required>
       <div className={styles.chips}>
         <Chip
           title='полное оформление'
