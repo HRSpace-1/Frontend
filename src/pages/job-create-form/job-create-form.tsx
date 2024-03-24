@@ -8,6 +8,13 @@ import ProfessionalSkillsInput from '../../components/professional-skills-input/
 import CompanyIndustryInput from '../../components/company-industry-input/company-industry-input'
 import Sidebar from '../../components/sidebar/sidebar'
 import styles from './job-create-form.module.scss'
+import WorkFormatInput from '../../components/work-format-input/work-format-input'
+import ExperienceJobInput from '../../components/experience-job-input/experience-job-input'
+import SaloryInput from '../../components/salory-input/salory-input'
+import TypeEmploymentInput from '../../components/type-employment-input/type-employment-input'
+import FormalizationContractInput from '../../components/formalization-contract-input/formalization-contract-input'
+import ConditionsInput from '../../components/conditions-input/conditions-input'
+import ResponsibilitiesInput from '../../components/responsibilities-input/responsibilities-input'
 
 function JobCreateForm() {
   const { step } = useAppSelector(state => state.progressBar)
@@ -29,6 +36,13 @@ function JobCreateForm() {
         <NameVacancyInput />
         <ProfessionalSkillsInput />
         <CompanyIndustryInput />
+        <WorkFormatInput />
+        <ExperienceJobInput />
+        <TypeEmploymentInput />
+        <SaloryInput />
+        <FormalizationContractInput />
+        <ConditionsInput />
+        <ResponsibilitiesInput />
       </Form>
     </div>
   )

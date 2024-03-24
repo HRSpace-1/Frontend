@@ -1,0 +1,31 @@
+.experienceJobInput {
+  margin-bottom: 4px;
+}
+
+.inputBlock {
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 8px;
+  max-width: 205px;
+  max-height: 40px;
+  padding: 8px 20px;
+  box-sizing: border-box;
+}
+
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.input {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  max-width: 55px;
+  max-height: 24px;
+}
+
+.inputText {
+  color: gray;
+}
