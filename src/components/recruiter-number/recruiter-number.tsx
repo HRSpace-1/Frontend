@@ -1,9 +1,10 @@
 import styles from './recruiter-number.module.scss'
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import InputBlock from '../input-block/input-block'
 import Chip from '../../ui/сhip/сhip'
 
 const RecruiterNumber: FC = () => {
+  const [activeChips, setActiveChips] = useState(null)
   const type = 'secondary'
 
   return (
@@ -13,9 +14,30 @@ const RecruiterNumber: FC = () => {
         одному, кто закроет заявку
       </p>
       <div className={styles.chips}>
-        <Chip title='1' type={type} />
-        <Chip title='2' type={type} />
-        <Chip title='3' type={type} />
+        <Chip
+          title='1'
+          type={type}
+          activeChips={activeChips}
+          setActiveChips={setActiveChips}
+          id={1}
+          name='1'
+        />
+        <Chip
+          title='2'
+          type={type}
+          activeChips={activeChips}
+          setActiveChips={setActiveChips}
+          id={1}
+          name='2'
+        />
+        <Chip
+          title='3'
+          type={type}
+          activeChips={activeChips}
+          setActiveChips={setActiveChips}
+          id={1}
+          name='3'
+        />
       </div>
     </InputBlock>
   )

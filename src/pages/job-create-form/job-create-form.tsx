@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../../services/hooks'
 import { ProgressBarSlice } from '../../services/slices/progress-bar-slice'
 import Form from '../../components/form/form'
@@ -20,7 +19,6 @@ import { useForm } from '../../utils/hooks'
 import { FormDataSlice } from '../../services/slices/form-data-slice'
 
 function JobCreateForm() {
-  const { pathname } = useLocation()
   const { step } = useAppSelector(state => state.progressBar)
   const dispatch = useAppDispatch()
 
