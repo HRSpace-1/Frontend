@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../../services/hooks'
 import { ProgressBarSlice } from '../../services/slices/progress-bar-slice'
 import Form from '../../components/form/form'
@@ -17,12 +18,18 @@ import ConditionsInput from '../../components/conditions-input/conditions-input'
 import ResponsibilitiesInput from '../../components/responsibilities-input/responsibilities-input'
 
 function JobCreateForm() {
+  const { pathname } = useLocation()
   const { step } = useAppSelector(state => state.progressBar)
   const dispatch = useAppDispatch()
 
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
     dispatch(ProgressBarSlice.actions.changeProgressBarSlice(1))
-  }, [])
+  }, [pathname])
 
   return (
     <div className={styles.page}>
