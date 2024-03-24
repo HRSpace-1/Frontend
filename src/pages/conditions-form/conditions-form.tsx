@@ -6,6 +6,7 @@ import { ProgressBarSlice } from '../../services/slices/progress-bar-slice'
 import Sidebar from '../../components/sidebar/sidebar'
 import Form from '../../components/form/form'
 import InputsSample from '../../components/inputs-sample/inputs-sample'
+import RecruiterNumber from '../../components/recruiter-number/recruiter-number'
 
 function ConditionsForm() {
   const { pathname } = useLocation()
@@ -28,8 +29,9 @@ function ConditionsForm() {
         text='Опишите, как вы видите сотрудничество с нашим рекрутером в соответствии с вашими требованиями и пожеланиями.'
         step={step}
       />
-      <Form title={'Вознаграждение рекрутера'} step={step}>
+      <Form title={'Условия сотрудничества'} step={step}>
         <InputsSample />
+        <RecruiterNumber />
       </Form>
     </div>
   )

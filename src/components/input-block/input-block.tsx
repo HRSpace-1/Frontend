@@ -16,7 +16,9 @@ const InputBlock: FC<IInputBlock> = ({
 }) => {
   return (
     <div className={`${styles.inputBlock} ${extraClass}`}>
-      <div className={styles.container}>
+      <div
+        className={`${styles.container} ${extraClass === 'smallMargin' && styles.smallMargin}`}
+      >
         <h2 className={styles.title}>{title}</h2>
         {required === true && <p className={styles.star}>*</p>}
       </div>
