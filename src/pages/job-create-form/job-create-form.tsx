@@ -16,6 +16,7 @@ import FormalizationContractInput from '../../components/formalization-contract-
 import ConditionsInput from '../../components/conditions-input/conditions-input'
 import ResponsibilitiesInput from '../../components/responsibilities-input/responsibilities-input'
 import { useForm } from '../../utils/hooks'
+import { FormDataSlice } from '../../services/slices/form-data-slice'
 
 function JobCreateForm() {
   const { step } = useAppSelector(state => state.progressBar)
@@ -31,6 +32,7 @@ function JobCreateForm() {
     salary_from: null,
     salary_up_to: null,
     paperwork: '',
+    condition_vacancy: null,
     conditions: null,
     responsibilities: null
   })
@@ -40,6 +42,10 @@ function JobCreateForm() {
     console.log(inputValues)
   }, [inputValues])
 
+  function clickButtonForward() {
+    dispatch(FormDataSlice.actions.addFormData(inputValues))
+  }
+
   return (
     <div className={styles.page}>
       <Sidebar
@@ -47,7 +53,11 @@ function JobCreateForm() {
         text='Выберите удобный способ выплат за услуги рекрутера. Мы предлагаем три варианты оплаты для вашего удобства.'
         step={step}
       />
-      <Form title={'Создание вакансии'} step={step}>
+      <Form
+        title={'Создание вакансии'}
+        step={step}
+        clickButtonForward={clickButtonForward}
+      >
         <InputsSample />
         <NameVacancyInput handleChange={handleChange} />
         <ProfessionalSkillsInput addValue={addValue} />
@@ -55,7 +65,7 @@ function JobCreateForm() {
         <WorkFormatInput addValue={addValue} />
         <ExperienceJobInput addValue={addValue} />
         <TypeEmploymentInput addValue={addValue} />
-        <SaloryInput addValue={addValue} />
+        <SaloryInput handleChange={handleChange} />
         <FormalizationContractInput addValue={addValue} />
         <ConditionsInput addValue={addValue} />
         <ResponsibilitiesInput handleChange={handleChange} />

@@ -71,6 +71,7 @@ module.exports = {
   plugins: ['@typescript-eslint', 'react'],
   rules: {
     '@typescript-eslint/no-unused-vars': 'warn',
-    'prettier/prettier': ['warn', { endOfLine: 'auto' }]
+    'prettier/prettier': ['warn', { endOfLine: 'auto' }],
+    '@typescript-eslint/no-explicit-any': 'off'
   }
 }

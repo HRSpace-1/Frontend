@@ -8,10 +8,6 @@ const TypeEmploymentInput: FC<IPropsButtons> = ({ addValue }) => {
   const [activeChips, setActiveChips] = useState([])
 
   useEffect(() => {
-    setActiveChips([...activeChips, { name: 'tatata', id: 1397418 }])
-  }, [])
-
-  useEffect(() => {
     // setActiveChips([...activeChips, { name: 'tatata', id: 1397418 }])
     addValue('employment', activeChips)
   }, [activeChips])
@@ -23,9 +19,30 @@ const TypeEmploymentInput: FC<IPropsButtons> = ({ addValue }) => {
       required
     >
       <div className={styles.chips}>
-        <Chip title='полная' name='full_time' />
-        <Chip title='частичная' name='"part_time' />
-        <Chip title='проектная деятельность' name='project_activities' />
+        <Chip
+          title='полная'
+          name='full_time'
+          activeChips={activeChips}
+          setActiveChips={setActiveChips}
+          id={1}
+          some={true}
+        />
+        <Chip
+          title='частичная'
+          name='"part_time'
+          activeChips={activeChips}
+          setActiveChips={setActiveChips}
+          id={2}
+          some={true}
+        />
+        <Chip
+          title='проектная деятельность'
+          name='project_activities'
+          activeChips={activeChips}
+          setActiveChips={setActiveChips}
+          id={3}
+          some={true}
+        />
       </div>
     </InputBlock>
   )

@@ -4,9 +4,10 @@ import styles from './button-panel.module.scss'
 
 interface IButtonPanel {
   step: number
+  clickButtonForward?: () => void
 }
 
-const ButtonPanel: FC<IButtonPanel> = ({ step }) => {
+const ButtonPanel: FC<IButtonPanel> = ({ step, clickButtonForward }) => {
   return (
     <div className={styles.container}>
       {step === 2 && (
@@ -31,6 +32,7 @@ const ButtonPanel: FC<IButtonPanel> = ({ step }) => {
           action='forward'
           style='primary'
           step={step}
+          clickButtonForward={clickButtonForward}
         />
       )}
     </div>

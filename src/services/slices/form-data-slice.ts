@@ -22,6 +22,7 @@ const initialState: IFormDataRequiredState = {
   terms_recruiter: '',
   stop_list_employee: null,
   id: 0,
+  condition_vacancy: null,
   skills: null,
   work_format: null,
   employment: null

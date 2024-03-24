@@ -10,13 +10,22 @@ interface IButton {
   action?: 'back' | 'forward' | 'submit' | 'chat'
   style: 'primary' | 'secondary' | 'chat'
   step?: number
+  clickButtonForward?: () => void
 }
 
-const Button: FC<IButton> = ({ title, action = '', style, step }) => {
+const Button: FC<IButton> = ({
+  title,
+  action = '',
+  style,
+  step,
+  clickButtonForward
+}) => {
   const navigate = useNavigate()
 
   function clickButton(evt: React.SyntheticEvent) {
     evt.preventDefault()
+
+    clickButtonForward()
 
     if (action === 'back') {
       if (step === 2) {

@@ -39,6 +39,7 @@ export interface IFormData {
   resume_type?: 'no_interview' | 'with_interview' | ''
   terms_recruiter?: 'gph' | 'agreement_with_legal_entity' | ''
   stop_list_employee?: string | null
+  condition_vacancy?: any[] | null
   id?: number
   skills?: Array<ISkillObj> | null
   work_format?: Array<IWorkFormatObj>
@@ -73,6 +74,7 @@ export interface IFormDataRequiredState {
   stop_list_employee?: string | null
   id: number
   skills: Array<ISkillObj> | null
+  condition_vacancy?: any[] | null
   work_format: Array<IWorkFormatObj>
   employment: Array<IEmploymentObj>
 }
