@@ -2,13 +2,48 @@
 @import '../../styles/const.scss';
 
 .chip {
-  @include reset-button;
-  @include text-regular-16-400;
   width: fit-content;
-  display: block;
-  color: $color-accent-blue;
   box-sizing: border-box;
-  padding: 7px 19.5px;
   border: 1px solid $color-accent-blue;
   border-radius: 8px;
+  cursor: pointer;
+}
+
+.primary {
+  @include text-regular-14-400;
+  color: $color-accent-blue;
+  padding: 5.2px 15px;
+}
+
+.secondary {
+  @include text-regular-16-400;
+  color: $color-accent-blue;
+  padding: 7px 19.5px;
+}
+
+.primaryActive {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: $color-primary-blue;
+  border-color: $color-primary-blue;
+  background-color: $color-secondary-blue;
+}
+
+.secondaryActive {
+  color: white;
+  background-color: $color-accent-blue;
+}
+
+.text {
+  @include reset-text;
+}
+
+.close {
+  width: 8px;
+  height: 8px;
+
+  & * {
+    fill: $color-primary-blue;
+  }
 }
