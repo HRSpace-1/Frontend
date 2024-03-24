@@ -4,7 +4,7 @@ import styles from './employee-pay-input.module.scss'
 
 function EmployeePayInput() {
   return (
-    <InputBlock title='Вознаграждение за одного сотрудника' requred>
+    <InputBlock title='Вознаграждение за одного сотрудника' required>
       <div className={styles.container}>
         <Input
           placeholder='Другая сумма оплаты'

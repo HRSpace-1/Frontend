@@ -3,7 +3,7 @@ import styles from './input-block.module.scss'
 
 interface IInputBlock {
   title: string
-  requred?: boolean
+  required?: boolean
   children: React.ReactNode
   extraClass?: string
 }
@@ -11,14 +11,14 @@ interface IInputBlock {
 const InputBlock: FC<IInputBlock> = ({
   title,
   children,
-  requred,
+  required,
   extraClass = ''
 }) => {
   return (
     <div className={`${styles.inputBlock} ${extraClass}`}>
       <div className={styles.container}>
         <h2 className={styles.title}>{title}</h2>
-        {requred === true && <p className={styles.star}>*</p>}
+        {required === true && <p className={styles.star}>*</p>}
       </div>
       {children}
     </div>

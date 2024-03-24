@@ -1,8 +1,11 @@
 import { useEffect } from 'react'
-import styles from './job-create-form.module.scss'
 import { useAppDispatch } from '../../services/hooks'
 import { ProgressBarSlice } from '../../services/slices/progress-bar-slice'
 import Form from '../../components/form/form'
+import InputsSample from '../../components/inputs-sample/inputs-sample'
+import NameVacancyInput from '../../components/name-vacancy-input/name-vacancy-input'
+import ProfessionalSkillsInput from '../../components/professional-skills-input/professional-skills-input'
+import CompanyIndustryInput from '../../components/company-industry-input/company-industry-input'
 
 function JobCreateForm() {
   const dispatch = useAppDispatch()
@@ -13,14 +16,10 @@ function JobCreateForm() {
 
   return (
     <Form title={'Создание вакансии'}>
-      <div className={styles.inputs}>
-        <input type='button' className={styles.input}>
-          Загрузить уже созданное
-        </input>
-        <input type='button' className={styles.input}>
-          Создать из шаблона
-        </input>
-      </div>
+      <InputsSample />
+      <NameVacancyInput />
+      <ProfessionalSkillsInput />
+      <CompanyIndustryInput />
     </Form>
   )
 }

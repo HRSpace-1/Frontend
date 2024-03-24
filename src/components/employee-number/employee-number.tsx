@@ -22,7 +22,7 @@ function EmployeeNumber() {
 
   return (
     <div className={`${styles.employeeNumber}`}>
-      <InputBlock title='Сколько сотрудников' requred>
+      <InputBlock title='Сколько сотрудников' required>
         <div className={styles.container}>
           <button className={styles.countButton} onClick={decrement}>
             <IconMinus />
