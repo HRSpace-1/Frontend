@@ -22,8 +22,6 @@ const SaloryInput: FC<IPropsInputs> = ({ handleChange }) => {
           onChange={handleChange}
         />
         <p className={styles.inputText}>₽</p>
-        <input type='number' className={styles.input} />
-        <p className={styles.inputText}> ₽</p>
       </div>
     </InputBlock>
   )
