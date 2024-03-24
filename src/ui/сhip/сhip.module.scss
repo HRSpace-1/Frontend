@@ -1,0 +1,14 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/const.scss';
+
+.chip {
+  @include reset-button;
+  @include text-regular-16-400;
+  width: fit-content;
+  display: block;
+  color: $color-accent-blue;
+  box-sizing: border-box;
+  padding: 7px 19.5px;
+  border: 1px solid $color-accent-blue;
+  border-radius: 8px;
+}
