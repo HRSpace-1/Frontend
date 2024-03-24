@@ -23,8 +23,8 @@ const initialState: IFormDataRequiredState = {
   stop_list_employee: null,
   id: 0,
   skills: null,
-  work_format: [],
-  employment: []
+  work_format: null,
+  employment: null
 }
 
 export const FormDataSlice = createSlice({

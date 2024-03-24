@@ -1,7 +1,13 @@
+import { FC, useEffect } from 'react'
+import { IPropsButtons } from '../../utils/types'
 import InputBlock from '../input-block/input-block'
 import styles from './salory-input.module.scss'
 
-function SaloryInput() {
+const SaloryInput: FC<IPropsButtons> = ({ addValue }) => {
+  useEffect(() => {
+    console.log(addValue)
+  }, [])
+
   return (
     <InputBlock
       title='Заработная плата'

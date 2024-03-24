@@ -76,3 +76,20 @@ export interface IFormDataRequiredState {
   work_format: Array<IWorkFormatObj>
   employment: Array<IEmploymentObj>
 }
+
+export interface IPropsInputs {
+  handleChange: (evt: React.ChangeEvent<HTMLInputElement>) => void
+}
+
+export interface IPropsButtons {
+  addValue: (
+    name: string,
+    value:
+      | string
+      | number
+      | Array<IEmploymentObj>
+      | Array<IWorkFormatObj>
+      | Array<ISkillObj>
+      | null
+  ) => void
+}

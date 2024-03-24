@@ -15,14 +15,30 @@ import TypeEmploymentInput from '../../components/type-employment-input/type-emp
 import FormalizationContractInput from '../../components/formalization-contract-input/formalization-contract-input'
 import ConditionsInput from '../../components/conditions-input/conditions-input'
 import ResponsibilitiesInput from '../../components/responsibilities-input/responsibilities-input'
+import { useForm } from '../../utils/hooks'
 
 function JobCreateForm() {
   const { step } = useAppSelector(state => state.progressBar)
   const dispatch = useAppDispatch()
 
+  const { inputValues, handleChange, addValue } = useForm({
+    title: '',
+    skills: null,
+    company_specialization: '',
+    work_format: null,
+    experience: '',
+    employment: null,
+    salary_from: null,
+    salary_up_to: null,
+    paperwork: '',
+    conditions: null,
+    responsibilities: null
+  })
+
   useEffect(() => {
     dispatch(ProgressBarSlice.actions.changeProgressBarSlice(1))
-  }, [])
+    console.log(inputValues)
+  }, [inputValues])
 
   return (
     <div className={styles.page}>
@@ -33,16 +49,16 @@ function JobCreateForm() {
       />
       <Form title={'Создание вакансии'} step={step}>
         <InputsSample />
-        <NameVacancyInput />
-        <ProfessionalSkillsInput />
-        <CompanyIndustryInput />
-        <WorkFormatInput />
-        <ExperienceJobInput />
-        <TypeEmploymentInput />
-        <SaloryInput />
-        <FormalizationContractInput />
-        <ConditionsInput />
-        <ResponsibilitiesInput />
+        <NameVacancyInput handleChange={handleChange} />
+        <ProfessionalSkillsInput addValue={addValue} />
+        <CompanyIndustryInput addValue={addValue} />
+        <WorkFormatInput addValue={addValue} />
+        <ExperienceJobInput addValue={addValue} />
+        <TypeEmploymentInput addValue={addValue} />
+        <SaloryInput addValue={addValue} />
+        <FormalizationContractInput addValue={addValue} />
+        <ConditionsInput addValue={addValue} />
+        <ResponsibilitiesInput handleChange={handleChange} />
       </Form>
     </div>
   )

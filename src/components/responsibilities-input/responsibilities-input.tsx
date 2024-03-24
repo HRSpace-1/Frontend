@@ -1,8 +1,10 @@
+import { FC } from 'react'
 import Input from '../../ui/input/input'
 import InputBlock from '../input-block/input-block'
 import styles from './responsibilities-input.module.scss'
+import { IPropsInputs } from '../../utils/types'
 
-function ResponsibilitiesInput() {
+const ResponsibilitiesInput: FC<IPropsInputs> = ({ handleChange }) => {
   return (
     <InputBlock
       title='Обязанности и требования'
@@ -12,6 +14,7 @@ function ResponsibilitiesInput() {
       <Input
         placeholder='Опишите подробнее вакансию'
         extraClass={styles.inputPrice}
+        handleChange={handleChange}
       />
     </InputBlock>
   )
