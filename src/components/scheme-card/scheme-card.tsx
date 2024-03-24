@@ -6,12 +6,19 @@ interface ISchemeCard {
   text: string
   type: string
   children?: React.ReactNode
+  selectedCard: string | null
+  setSelectedCard: React.Dispatch<string>
 }
 
-const SchemeCard: FC<ISchemeCard> = ({ title, text, children, type }) => {
+const SchemeCard: FC<ISchemeCard> = ({
+  title,
+  text,
+  children,
+  type,
+  selectedCard,
+  setSelectedCard
+}) => {
   const [badgeClassName, setBadgeClassName] = useState(null)
-  const [selectedCard, setSelectedCard] = useState(null)
-
   const isSelected = (value: string): boolean => selectedCard === value
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
