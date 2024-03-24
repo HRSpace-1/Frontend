@@ -1,0 +1,46 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/const.scss';
+
+.sidebar {
+  min-width: 504px;
+  min-height: 804px;
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+  padding: 0 64px 51px;
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+}
+
+.step1 {
+  background-image: url('../../images/content/step1-info.svg');
+}
+
+.step2 {
+  background-image: url('../../images/content/step2-info.svg');
+}
+
+.step3 {
+  background-image: url('../../images/content/step3-info.svg');
+}
+
+.container {
+  max-width: 376px;
+  width: 100%;
+}
+
+.title {
+  @include reset-text;
+  @include text-form-title;
+  color: $color-black;
+  margin-bottom: 8px;
+}
+
+.text {
+  @include reset-text;
+  @include text-regular-16-400;
+  color: $color-accent-gray;
+  margin-bottom: 24px;
+}
