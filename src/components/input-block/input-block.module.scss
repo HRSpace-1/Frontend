@@ -10,6 +10,10 @@
   margin-bottom: 16px;
 }
 
+.smallMargin {
+  margin-bottom: 4px;
+}
+
 .title {
   @include reset-text;
   @include text-form-subtitle;

@@ -2,7 +2,7 @@
 @import '../../styles/const.scss';
 
 .inputBlock {
-  min-width: 205px;
+  min-width: 220px;
   width: fit-content;
   height: 40px;
   display: flex;
@@ -18,13 +18,14 @@
 }
 
 .input {
-  max-width: 50px;
+  max-width: 60px;
   width: fit-content;
   height: 24px;
   outline: none;
   border: none;
   border-bottom: 1px dotted $color-primary-gray;
   text-decoration: none;
+  color: $color-black;
   padding: 0;
   margin: 0 3px;
 }

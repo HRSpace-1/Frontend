@@ -1,5 +1,6 @@
 import styles from './recruiter-pay-form.module.scss'
 import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../../services/hooks'
 import { ProgressBarSlice } from '../../services/slices/progress-bar-slice'
 import Sidebar from '../../components/sidebar/sidebar'
@@ -11,12 +12,18 @@ import SchemeBlock from '../../components/scheme-block/scheme-block'
 import ResultBlock from '../../components/result-block/result-block'
 
 function RecruiterPayForm() {
+  const { pathname } = useLocation()
   const { step } = useAppSelector(state => state.progressBar)
   const dispatch = useAppDispatch()
 
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
     dispatch(ProgressBarSlice.actions.changeProgressBarSlice(2))
-  }, [])
+  }, [pathname])
 
   return (
     <div className={styles.page}>

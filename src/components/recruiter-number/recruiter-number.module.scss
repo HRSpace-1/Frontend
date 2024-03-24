@@ -1,0 +1,14 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/const.scss';
+
+.text {
+  @include reset-text;
+  @include text-regular-14-400;
+  color: $color-accent-gray;
+  margin-bottom: 16px;
+}
+
+.chips {
+  display: flex;
+  gap: 16px;
+}
