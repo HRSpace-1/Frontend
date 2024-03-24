@@ -3,8 +3,12 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
   flex: 1;
+}
+
+.step2 {
+  gap: 20px;
 }
 
 .title {

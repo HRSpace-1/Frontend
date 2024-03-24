@@ -4,12 +4,8 @@ import styles from './company-industry-input.module.scss'
 
 function CompanyIndustryInput() {
   return (
-    <InputBlock
-      title='Отрасль компании'
-      extraClass={styles.nameVacancyInput}
-      required
-    >
-      <Input placeholder='Направление бизнеса' extraClass={styles.inputPrice} />
+    <InputBlock title='Отрасль компании' extraClass={styles.input}>
+      <Input placeholder='Направление бизнеса' />
     </InputBlock>
   )
 }

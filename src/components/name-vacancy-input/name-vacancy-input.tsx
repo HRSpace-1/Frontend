@@ -4,12 +4,8 @@ import styles from './name-vacancy-input.module.scss'
 
 function NameVacancyInput() {
   return (
-    <InputBlock
-      title='Название вакансии'
-      extraClass={styles.nameVacancyInput}
-      required
-    >
-      <Input placeholder='Укажите вакансию' extraClass={styles.inputPrice} />
+    <InputBlock title='Название вакансии' extraClass={styles.input} required>
+      <Input placeholder='Укажите вакансию' />
     </InputBlock>
   )
 }

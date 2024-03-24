@@ -3,16 +3,14 @@ import InputBlock from '../input-block/input-block'
 import styles from './type-employment-input.module.scss'
 
 function TypeEmploymentInput() {
+  const type = 'secondary'
+
   return (
-    <InputBlock
-      title='Занятость'
-      extraClass={styles.typeEmploymentInput}
-      required
-    >
+    <InputBlock title='Занятость'>
       <div className={styles.chips}>
-        <Chip title='полная' />
-        <Chip title='частичная' />
-        <Chip title='проектная деятельность' />
+        <Chip title='полная' type={type} />
+        <Chip title='частичная' type={type} />
+        <Chip title='проектная деятельность' type={type} />
       </div>
     </InputBlock>
   )

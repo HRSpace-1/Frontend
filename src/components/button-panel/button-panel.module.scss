@@ -4,6 +4,11 @@
 }
 
 .optionalButtons {
+  width: 100%;
   display: flex;
   gap: 12px;
+}
+
+.forward {
+  margin-left: auto;
 }

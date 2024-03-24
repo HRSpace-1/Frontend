@@ -3,16 +3,14 @@ import InputBlock from '../input-block/input-block'
 import styles from './formalization-contract-input.module.scss'
 
 function FormalizationContractInput() {
+  const type = 'secondary'
+
   return (
-    <InputBlock
-      title='Оформление'
-      extraClass={styles.experienceJobInput}
-      required
-    >
+    <InputBlock title='Оформление'>
       <div className={styles.chips}>
-        <Chip title='полное оформление' />
-        <Chip title='срочный договор' />
-        <Chip title='ГПХ' />
+        <Chip title='полное оформление' type={type} />
+        <Chip title='срочный договор' type={type} />
+        <Chip title='ГПХ' type={type} />
       </div>
     </InputBlock>
   )

@@ -4,17 +4,19 @@ import InputBlock from '../input-block/input-block'
 import styles from './work-format-input.module.scss'
 
 function WorkFormatInput() {
+  const type = 'secondary'
+
   return (
-    <InputBlock title='Формат' extraClass={styles.nameWorkFormatInput} required>
+    <InputBlock title='Формат'>
       <div className={styles.chips}>
-        <Chip title='офис' />
-        <Chip title='гибрид' />
-        <Chip title='удаленно' />
-        <Chip title='удаленно из РФ' />
+        <Chip title='офис' type={type} />
+        <Chip title='гибрид' type={type} />
+        <Chip title='удаленно' type={type} />
+        <Chip title='удаленно из РФ' type={type} />
       </div>
       <Input
         placeholder='Введите город или точный адресс'
-        extraClass={styles.inputPrice}
+        extraClass={styles.input}
       />
     </InputBlock>
   )

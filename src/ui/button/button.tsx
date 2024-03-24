@@ -10,9 +10,16 @@ interface IButton {
   action?: 'back' | 'forward' | 'submit' | 'chat'
   style: 'primary' | 'secondary' | 'chat'
   step?: number
+  extraClass?: string
 }
 
-const Button: FC<IButton> = ({ title, action = '', style, step }) => {
+const Button: FC<IButton> = ({
+  title,
+  action = '',
+  style,
+  step,
+  extraClass = ''
+}) => {
   const navigate = useNavigate()
 
   function clickButton(evt: React.SyntheticEvent) {
@@ -42,7 +49,7 @@ const Button: FC<IButton> = ({ title, action = '', style, step }) => {
   return (
     <button
       type={action === 'submit' ? 'submit' : 'button'}
-      className={`${styles.button} ${styles[style]}`}
+      className={`${styles.button} ${styles[style]} ${extraClass}`}
       onClick={clickButton}
     >
       {action === 'chat' && <IconChat className={styles.chatIcon} />}

@@ -23,6 +23,7 @@ const ButtonPanel: FC<IButtonPanel> = ({ step }) => {
             action='submit'
             style='primary'
             step={step}
+            extraClass={styles.forward}
           />
         </div>
       ) : (
@@ -31,6 +32,7 @@ const ButtonPanel: FC<IButtonPanel> = ({ step }) => {
           action='forward'
           style='primary'
           step={step}
+          extraClass={styles.forward}
         />
       )}
     </div>

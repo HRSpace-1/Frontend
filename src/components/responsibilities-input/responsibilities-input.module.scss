@@ -1,8 +1,19 @@
-.responsibilitiesInput {
-  margin-bottom: 20px;
+@import '../../styles/mixins.scss';
+@import '../../styles/const.scss';
+
+.inputBlock {
+  position: relative;
 }
 
-.inputPrice {
-  display: flex;
-  min-height: 68px;
+.hint {
+  @include reset-text;
+  @include text-regular-14-400;
+  color: $color-primary-gray;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.textarea {
+  margin-top: -6px;
 }

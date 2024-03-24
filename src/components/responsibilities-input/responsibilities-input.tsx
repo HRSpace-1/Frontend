@@ -4,14 +4,14 @@ import styles from './responsibilities-input.module.scss'
 
 function ResponsibilitiesInput() {
   return (
-    <InputBlock
-      title='Обязанности и требования'
-      extraClass={styles.responsibilitiesInput}
-      required
-    >
+    <InputBlock title='Обязанности и требования' extraClass={styles.inputBlock}>
+      <p className={styles.hint}>
+        описание рекрутер отредактирует перед публикацией
+      </p>
       <Input
         placeholder='Опишите подробнее вакансию'
-        extraClass={styles.inputPrice}
+        isTextaria={true}
+        extraClass={styles.textarea}
       />
     </InputBlock>
   )

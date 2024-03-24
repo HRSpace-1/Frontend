@@ -1,16 +1,16 @@
-.experienceJobInput {
-  margin-bottom: 4px;
-}
+@import '../../styles/mixins.scss';
+@import '../../styles/const.scss';
 
 .inputBlock {
+  min-width: 205px;
+  width: fit-content;
+  height: 40px;
   display: flex;
   align-items: center;
-  border: 1px solid gray;
-  border-radius: 8px;
-  max-width: 205px;
-  max-height: 40px;
-  padding: 8px 20px;
   box-sizing: border-box;
+  padding: 8px 20px;
+  border: 1px solid $color-secondary-gray;
+  border-radius: 8px;
 }
 
 .input::-webkit-inner-spin-button {
@@ -18,14 +18,23 @@
 }
 
 .input {
-  text-decoration: none;
-  border: none;
+  max-width: 50px;
+  width: fit-content;
+  height: 24px;
   outline: none;
-  border-bottom: 1px solid gray;
-  max-width: 55px;
-  max-height: 24px;
+  border: none;
+  border-bottom: 1px dotted $color-primary-gray;
+  text-decoration: none;
+  padding: 0;
+  margin: 0 3px;
 }
 
 .inputText {
-  color: gray;
+  @include reset-text;
+  @include text-regular-16-400;
+  color: $color-primary-gray;
+
+  &:last-child {
+    margin-left: auto;
+  }
 }

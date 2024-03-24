@@ -6,13 +6,10 @@ function ProfessionalSkillsInput() {
   return (
     <InputBlock
       title='Профессиональные навыки'
-      extraClass={styles.professionalSkillsInput}
+      extraClass={styles.input}
       required
     >
-      <Input
-        placeholder='Необходимые навыки кандидата'
-        extraClass={styles.inputPrice}
-      />
+      <Input placeholder='Необходимые навыки кандидата' />
     </InputBlock>
   )
 }

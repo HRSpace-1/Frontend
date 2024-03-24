@@ -1,10 +1,15 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/const.scss';
+
 .inputs {
   display: flex;
+  gap: 16px;
+  margin-top: -19px;
 }
 
 .input {
-  border: none;
-  background-color: rgba(0, 0, 0, 0);
-  color: blue;
-  text-decoration: underline;
+  @include reset-button;
+  @include text-regular-16-400;
+  color: $color-primary-blue;
+  border-bottom: 1px solid $color-primary-blue;
 }

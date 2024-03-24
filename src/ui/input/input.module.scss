@@ -1,16 +1,27 @@
+@import '../../styles/mixins.scss';
 @import '../../styles/const.scss';
 
-.input {
+.common {
   width: 100%;
-  height: 40px;
   box-sizing: border-box;
   padding: 10px 16px;
   border: 1px solid $color-secondary-gray;
   border-radius: 8px;
   background-color: white;
+  @include text-regular-14-400;
   color: $color-black;
 
   &::placeholder {
     color: $color-primary-gray;
   }
+}
+
+.textarea {
+  height: 68px;
+  outline: none;
+  resize: none;
+}
+
+.input {
+  height: 40px;
 }
