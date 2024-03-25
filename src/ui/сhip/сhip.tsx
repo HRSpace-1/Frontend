@@ -19,7 +19,6 @@ const Chip: FC<IChip> = ({
   name,
   setActiveChips,
   activeChips,
-  id,
   some,
   isWorkFormat
 }) => {
@@ -30,21 +29,21 @@ const Chip: FC<IChip> = ({
     isPrimary ? setActive(true) : setActive(!isActive)
     if (some && typeof activeChips === 'object') {
       const checkedInArray = activeChips.some(item => {
-        return item.id === id
+        return item.name === name
       })
 
       if (checkedInArray === false) {
         if (isWorkFormat) {
-          setActiveChips([...activeChips, { title: name, id: id }])
+          setActiveChips([...activeChips, { title: name }])
         } else {
-          setActiveChips([...activeChips, { name: name, id: id }])
+          setActiveChips([...activeChips, { name: name }])
         }
       }
 
       if (checkedInArray === true) {
         setActive(false)
         const newActiveChips = activeChips.filter(item => {
-          return item.id !== id
+          return item.name !== name
         })
         setActiveChips(newActiveChips)
       }
@@ -64,9 +63,6 @@ const Chip: FC<IChip> = ({
       if (activeChips !== name && activeChips !== null) {
         setActive(false)
       }
-      // if (activeChips === null) {
-      //   isPrimary ? setActive(true) : setActive(!isActive)
-      // }
     }
   }
 
@@ -75,7 +71,7 @@ const Chip: FC<IChip> = ({
     setActive(false)
     if (some && typeof activeChips === 'object') {
       const newActiveChips = activeChips.filter(item => {
-        return item.id !== id
+        return item.name !== name
       })
       setActiveChips(newActiveChips)
     }
