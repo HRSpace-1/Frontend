@@ -1,0 +1,61 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/const.scss';
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 4px 6px;
+
+  &:hover {
+    border-radius: 4px;
+    background: $color-secondary-blue;
+  }
+}
+
+.wrap {
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border: 1px solid $color-secondary-gray;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+
+  &:checked {
+    background-color: $color-primary-blue;
+    border-color: $color-primary-blue;
+    position: relative;
+
+    &::before {
+      content: url('../../images/icons/check.svg');
+      width: 11px;
+      height: 9px;
+      position: absolute;
+      top: -2px;
+      right: 2px;
+    }
+  }
+
+  &:disabled {
+    background-color: $color-secondary-gray;
+    border-color: $color-secondary-gray;
+  }
+
+  &:disabled + .label {
+    color: $color-secondary-gray;
+  }
+}
+
+.label {
+  @include reset-text;
+  @include text-regular-16-400;
+  color: $color-black;
+}

@@ -1,0 +1,17 @@
+@import '../../styles/mixins.scss';
+
+.switchBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.title {
+  @include reset-text;
+  @include text-form-subtitle;
+}
