@@ -7,6 +7,12 @@ import Sidebar from '../../components/sidebar/sidebar'
 import Form from '../../components/form/form'
 import InputsSample from '../../components/inputs-sample/inputs-sample'
 import RecruiterNumber from '../../components/recruiter-number/recruiter-number'
+import ResumeShowingDate from '../../components/resume-showing-date/resume-showing-date'
+import ResumeReleaseDate from '../../components/resume-release-date/resume-release-date'
+import JobDuties from '../../components/job-duties/job-duties'
+import PreliminaryInterviewSwitch from '../../components/preliminary-interview-switch/preliminary-interview-switch'
+import AdditionalCommentsSwitch from '../../components/additional-comments-switch/additional-comments-switch'
+import StopListSwitch from '../../components/stop-list-switch/stop-list-switch'
 
 function ConditionsForm() {
   const { pathname } = useLocation()
@@ -32,6 +38,12 @@ function ConditionsForm() {
       <Form title={'Условия сотрудничества'} step={step}>
         <InputsSample />
         <RecruiterNumber />
+        <ResumeShowingDate />
+        <ResumeReleaseDate />
+        <JobDuties />
+        <PreliminaryInterviewSwitch />
+        <AdditionalCommentsSwitch />
+        <StopListSwitch />
       </Form>
     </div>
   )

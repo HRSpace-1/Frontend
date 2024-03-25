@@ -1,11 +1,29 @@
 import styles from './checkbox.module.scss'
-import { FC } from 'react'
+import { FC, useState } from 'react'
 
-const Checkbox: FC = () => {
+interface ICheckbox {
+  label: string
+}
+
+const Checkbox: FC<ICheckbox> = ({ label, ...props }) => {
+  const [isChecked, setIsChecked] = useState(false)
+
+  const handleChange = () => {
+    setIsChecked(!isChecked)
+  }
+
   return (
-    <label className={styles.label}>
-      <input type='checkbox' className={styles.checkbox} />
-      <span className={styles.checkmark}></span>
+    <label className={styles.container}>
+      <span className={styles.wrap}>
+        <input
+          type='checkbox'
+          checked={isChecked}
+          onChange={handleChange}
+          className={styles.checkbox}
+          {...props}
+        />
+      </span>
+      <p className={styles.label}>{label}</p>
     </label>
   )
 }
