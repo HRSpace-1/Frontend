@@ -11,7 +11,6 @@ const initialState: IFormDataRequiredState = {
   paperwork: '',
   responsibilities: null,
   requirements: null,
-  conditions: null,
   payment: 0,
   terms_payment: '',
   recruiters_number: 0,
@@ -22,7 +21,7 @@ const initialState: IFormDataRequiredState = {
   terms_recruiter: '',
   stop_list_employee: null,
   id: 0,
-  condition_vacancy: null,
+  conditions: null,
   skills: null,
   work_format: null,
   employment: null

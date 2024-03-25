@@ -9,7 +9,7 @@ const ConditionsInput: FC<IPropsButtons> = ({ addValue }) => {
   const type = 'secondary'
 
   useEffect(() => {
-    addValue('condition_vacancy', activeChips)
+    addValue('conditions', activeChips)
   }, [activeChips])
 
   return (
@@ -35,7 +35,7 @@ const ConditionsInput: FC<IPropsButtons> = ({ addValue }) => {
         />
         <Chip
           title='ДМС'
-          name='VHI'
+          name='dms'
           setActiveChips={setActiveChips}
           activeChips={activeChips}
           some={true}

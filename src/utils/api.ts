@@ -1,26 +1,66 @@
-import axios, { AxiosResponse } from 'axios'
-import { IFormDataRequiredState } from '../utils/types'
+import { IFormDataRequiredState, IFormDataResponseApi } from './types'
 
-export const BASE_URL = 'https://hrspace.sytes.net'
+class Api {
+  private _baseUrl: string
 
-function setHeaders() {
-  return {
-    'Content-Type': 'application/json'
+  constructor(url: string) {
+    this._baseUrl = url
+  }
+
+  _checkStatus<T>(res: Response): Promise<T> {
+    if (res.ok) {
+      return res.json()
+    }
+
+    return Promise.reject(`Ошибка: ${res.status}`)
+  }
+
+  postApplication(
+    formDataobj: IFormDataRequiredState
+  ): Promise<IFormDataResponseApi | void> {
+    return fetch(this._baseUrl + '/applications/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formDataobj)
+    }).then(res => {
+      this._checkStatus<IFormDataResponseApi>(res)
+    })
+  }
+
+  getSkills(): Promise<Array<string> | void> {
+    return fetch(this._baseUrl + '/directories/skills/', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(res => {
+      this._checkStatus<Array<string>>(res)
+    })
+  }
+  getJobTitle(): Promise<Array<string> | void> {
+    return fetch(this._baseUrl + '/directories/job-titles/', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(res => {
+      this._checkStatus<Array<string>>(res)
+    })
+  }
+  getSpecializations(): Promise<Array<string> | void> {
+    return fetch(this._baseUrl + '/directories/specializations/', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(res => {
+      this._checkStatus<Array<string>>(res)
+    })
   }
 }
 
-const instance = axios.create({
-  baseURL: BASE_URL + '/api/applications'
-})
+const api = new Api('https://hrspace.sytes.net/api')
 
-//Получить данные всех сотрудников моего подразделения
-export const postApplication = (
-  obj: IFormDataRequiredState
-): Promise<AxiosResponse<IFormDataRequiredState>> => {
-  return instance({
-    method: 'POST',
-    url: `employees/`,
-    headers: setHeaders(),
-    data: obj
-  })
-}
+export default api
