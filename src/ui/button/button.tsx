@@ -7,10 +7,13 @@ import { useNavigate } from 'react-router'
 
 interface IButton {
   title: string
-  action?: 'back' | 'forward' | 'submit' | 'chat'
+  action?: 'back' | 'forward' | 'submit' | 'draft' | 'chat'
   style: 'primary' | 'secondary' | 'chat'
   step?: number
   clickButtonForward?: () => void
+  onChat?: () => void
+  onDraft?: () => void
+  onPublish?: () => void
   extraClass?: string
 }
 
@@ -20,12 +23,27 @@ const Button: FC<IButton> = ({
   style,
   step,
   clickButtonForward = () => {},
+  onChat = () => {},
+  onDraft = () => {},
+  onPublish = () => {},
   extraClass
 }) => {
   const navigate = useNavigate()
 
   function clickButton(evt: React.SyntheticEvent) {
     evt.preventDefault()
+
+    if (action === 'chat') {
+      onChat()
+    }
+
+    if (action === 'draft') {
+      onDraft()
+    }
+
+    if (action === 'submit') {
+      onPublish()
+    }
 
     clickButtonForward()
 

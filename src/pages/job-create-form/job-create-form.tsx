@@ -95,6 +95,12 @@ function JobCreateForm() {
   // }, [])
 
   useEffect(() => {
+    api.getJobTitle().then(res => {
+      console.log(res)
+    })
+    api.getSkills().then(res => {
+      console.log(res)
+    })
     api.getSpecializations().then(res => {
       console.log(res)
     })

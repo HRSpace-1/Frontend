@@ -51,7 +51,7 @@ const EmployeePayInput: FC<IPropsButtons> = ({ addValue }) => {
         >
           {premium} ₽
           <Tooltip
-            text='Средний оклад, исходя из информации, которую вы указали в первом шаге '
+            text='Средний оклад, исходя из информации, которую вы указали в первом шаге'
             isActive={isHint}
             position='bottom'
           />

@@ -2,7 +2,8 @@
 @import '../../styles/mixins.scss';
 
 .tooltip {
-  min-width: 178px;;
+  min-width: 178px;
+  width: fit-content;
   box-sizing: border-box;
   padding: 8px 12px;
   border-radius: 4px;
@@ -10,30 +11,66 @@
   box-shadow: 0 0 10px 0 rgba($color-secondary-gray, .34);
   position: absolute;
   z-index: 10;
+
+  &::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    border: 6px solid transparent;
+  }
 }
 
 .top {
-  bottom: 100%;
+  bottom: calc(100% + 6px);
   left: 50%;
   transform: translateX(-50%);
+
+  &::after {
+    content: '';
+    border-top-color: white;
+    top: 100%;
+    left: calc(50% - 6px);
+  }
 }
 
 .right {
-  left: 100%;
+  left: calc(100% + 6px);
   top: 50%;
   transform: translateY(-50%);
+
+  &::after {
+    content: '';
+    border-right-color: white;
+    right: 100%;
+    top: calc(50% - 6px);
+  }
 }
 
 .bottom {
-  top: 100%;
+  top: calc(100% + 6px);
   left: 50%;
   transform: translateX(-50%);
+
+  &::after {
+    content: '';
+    border-bottom-color: white;
+    bottom: 100%;
+    left: calc(50% - 6px);
+  }
 }
 
 .left {
-  right: 100%;
+  right: calc(100% + 6px);
   top: 50%;
   transform: translateY(-50%);
+
+  &::after {
+    content: '';
+    border-left-color: white;
+    left: 100%;
+    top: calc(50% - 6px);
+  }
 }
 
 .text {
