@@ -7,6 +7,7 @@ interface IInput {
   extraClass?: string
   name?: string
   handleChange?: (evt: React.ChangeEvent<HTMLInputElement>) => void
+  handleKeyDownEnter?: (evt: React.KeyboardEvent<HTMLInputElement>) => void
 }
 
 const Input: FC<IInput> = ({
@@ -14,7 +15,8 @@ const Input: FC<IInput> = ({
   extraClass = '',
   name,
   handleChange,
-  isTextaria = false
+  isTextaria = false,
+  handleKeyDownEnter
 }) => {
   return (
     <>
@@ -39,6 +41,7 @@ const Input: FC<IInput> = ({
           onChange={handleChange}
           placeholder={placeholder}
           name={name}
+          onKeyDown={handleKeyDownEnter}
         />
       )}
     </>
