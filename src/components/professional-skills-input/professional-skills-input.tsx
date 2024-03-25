@@ -40,10 +40,6 @@ const ProfessionalSkillsInput: FC<IPropsButtons> = ({ addValue }) => {
 
     setArrChipsName(newArrChipsName)
   }
-
-  useEffect(() => {
-    console.log(addValue)
-  }, [])
   return (
     <InputBlock
       title='Профессиональные навыки'

@@ -6,7 +6,12 @@ interface IInput {
   isTextaria?: boolean
   extraClass?: string
   name?: string
-  handleChange?: (evt: React.ChangeEvent<HTMLInputElement>) => void
+  typeInput?: string
+  handleChange?: (
+    evt:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => void
   handleKeyDownEnter?: (evt: React.KeyboardEvent<HTMLInputElement>) => void
 }
 
@@ -14,6 +19,7 @@ const Input: FC<IInput> = ({
   placeholder,
   extraClass = '',
   name,
+  typeInput,
   handleChange,
   isTextaria = false,
   handleKeyDownEnter
@@ -28,7 +34,7 @@ const Input: FC<IInput> = ({
         placeholder={placeholder}
       /> */}
       {isTextaria ? (
-        <input
+        <textarea
           className={`${styles.common} ${styles.textarea} ${extraClass}`}
           placeholder={placeholder}
           onChange={handleChange}
@@ -37,7 +43,7 @@ const Input: FC<IInput> = ({
       ) : (
         <input
           className={`${styles.common} ${styles.input} ${extraClass}`}
-          type='text'
+          type={typeInput ? typeInput : 'text'}
           onChange={handleChange}
           placeholder={placeholder}
           name={name}

@@ -10,11 +10,18 @@ import EmployeePayInput from '../../components/employee-pay-input/employee-pay-i
 import EmployeeNumber from '../../components/employee-number/employee-number'
 import SchemeBlock from '../../components/scheme-block/scheme-block'
 import ResultBlock from '../../components/result-block/result-block'
+import { useForm } from '../../utils/hooks'
+import { FormDataSlice } from '../../services/slices/form-data-slice'
 
 function RecruiterPayForm() {
   const { pathname } = useLocation()
   const { step } = useAppSelector(state => state.progressBar)
   const dispatch = useAppDispatch()
+
+  const { inputValues, addValue } = useForm({
+    payment: 0,
+    terms_payment: ''
+  })
 
   useEffect(() => {
     window.scrollTo({
@@ -24,6 +31,10 @@ function RecruiterPayForm() {
     })
     dispatch(ProgressBarSlice.actions.changeProgressBarSlice(2))
   }, [pathname])
+
+  function clickButtonForward() {
+    dispatch(FormDataSlice.actions.addFormData(inputValues))
+  }
 
   return (
     <div className={styles.page}>
@@ -35,18 +46,18 @@ function RecruiterPayForm() {
       <Form
         title={'Вознаграждение рекрутера'}
         step={step}
-        clickButtonForward={() => {}}
+        clickButtonForward={clickButtonForward}
       >
         <FinishPayInfo />
         <div className={styles.container}>
           <div className={styles.employeePayInput}>
-            <EmployeePayInput />
+            <EmployeePayInput addValue={addValue} />
           </div>
           <div className={styles.employeeNumber}>
             <EmployeeNumber />
           </div>
         </div>
-        <SchemeBlock />
+        <SchemeBlock addValue={addValue} />
         <ResultBlock />
       </Form>
     </div>

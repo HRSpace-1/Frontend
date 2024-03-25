@@ -4,10 +4,26 @@ import IconBadgeSmileGreen from '../../images/icons/badge-face-happy.svg'
 import IconBadgeSmileOrange from '../../images/icons/badge-face-smile.svg'
 import IconBadgeSmileRed from '../../images/icons/badge-face-neutral.svg'
 import styles from './scheme-block.module.scss'
-import { useState } from 'react'
+import { FC, useEffect, useState } from 'react'
+import { IPropsButtons } from '../../utils/types'
 
-function SchemeBlock() {
+const SchemeBlock: FC<IPropsButtons> = ({ addValue }) => {
   const [selectedCard, setSelectedCard] = useState(null)
+  const [cardName, setCardName] = useState('')
+
+  useEffect(() => {
+    if (selectedCard === 'orange') {
+      setCardName('fifty_fifty')
+    }
+    if (selectedCard === 'green') {
+      setCardName('all_now')
+    }
+    if (selectedCard === 'red') {
+      setCardName('all_after')
+    }
+
+    addValue('terms_payment', cardName)
+  }, [selectedCard, cardName])
 
   return (
     <InputBlock title='Схема выплат рекрутеру' required>
