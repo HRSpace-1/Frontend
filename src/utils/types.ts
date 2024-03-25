@@ -2,6 +2,10 @@ export interface ISkillObj {
   name: string
 }
 
+export interface INameObj {
+  name: string
+}
+
 export interface ISkillResponseObj {
   name: string
 }

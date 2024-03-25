@@ -32,6 +32,7 @@ function RecruiterPayForm() {
     dispatch(ProgressBarSlice.actions.changeProgressBarSlice(2))
   }, [pathname])
 
+  // функция должна сначала сохранять форму в редакс а потом отправлять запрос на сервер с данными из редакс
   function clickButtonForward() {
     dispatch(FormDataSlice.actions.addFormData(inputValues))
   }

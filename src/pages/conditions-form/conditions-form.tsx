@@ -13,11 +13,17 @@ import JobDuties from '../../components/job-duties/job-duties'
 import PreliminaryInterviewSwitch from '../../components/preliminary-interview-switch/preliminary-interview-switch'
 import AdditionalCommentsSwitch from '../../components/additional-comments-switch/additional-comments-switch'
 import StopListSwitch from '../../components/stop-list-switch/stop-list-switch'
+import { useForm } from '../../utils/hooks'
+import { FormDataSlice } from '../../services/slices/form-data-slice'
 
 function ConditionsForm() {
   const { pathname } = useLocation()
   const { step } = useAppSelector(state => state.progressBar)
   const dispatch = useAppDispatch()
+
+  const { inputValues, addValue } = useForm({
+    recruiters_number: 0
+  })
 
   useEffect(() => {
     window.scrollTo({
@@ -28,6 +34,10 @@ function ConditionsForm() {
     dispatch(ProgressBarSlice.actions.changeProgressBarSlice(3))
   }, [pathname])
 
+  function clickButtonForward() {
+    dispatch(FormDataSlice.actions.addFormData(inputValues))
+  }
+
   return (
     <div className={styles.page}>
       <Sidebar
@@ -35,9 +45,13 @@ function ConditionsForm() {
         text='Опишите, как вы видите сотрудничество с нашим рекрутером в соответствии с вашими требованиями и пожеланиями.'
         step={step}
       />
-      <Form title={'Условия сотрудничества'} step={step}>
+      <Form
+        title={'Условия сотрудничества'}
+        step={step}
+        clickButtonForward={clickButtonForward}
+      >
         <InputsSample />
-        <RecruiterNumber />
+        <RecruiterNumber addValue={addValue} />
         <ResumeShowingDate />
         <ResumeReleaseDate />
         <JobDuties />

@@ -1,11 +1,17 @@
 import styles from './recruiter-number.module.scss'
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import InputBlock from '../input-block/input-block'
 import Chip from '../../ui/сhip/сhip'
+import { IPropsButtons } from '../../utils/types'
 
-const RecruiterNumber: FC = () => {
+const RecruiterNumber: FC<IPropsButtons> = ({ addValue }) => {
   const [activeChips, setActiveChips] = useState(null)
   const type = 'secondary'
+
+  useEffect(() => {
+    const number = Number(activeChips)
+    addValue('recruiters_number', number)
+  }, [activeChips])
 
   return (
     <InputBlock title='Количество рекрутеров' extraClass='smallMargin'>
