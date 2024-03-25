@@ -13,9 +13,10 @@ const ResumeReleaseDate: FC = () => {
         доплату
       </p>
       <div className={styles.chips}>
-        <Chip name='desired_release_date' title='через неделю' type={type} />
-        <Chip name='desired_release_date' title='через 2 недели' type={type} />
-        <Chip name='desired_release_date' title='через месяц' type={type} />
+        {/* desired_release_date */}
+        <Chip name='week-later' title='через неделю' type={type} />
+        <Chip name='in-two-weeks' title='через 2 недели' type={type} />
+        <Chip name='month-later' title='через месяц' type={type} />
       </div>
     </InputBlock>
   )

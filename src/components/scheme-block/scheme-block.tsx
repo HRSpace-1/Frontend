@@ -10,7 +10,7 @@ function SchemeBlock() {
   const [selectedCard, setSelectedCard] = useState(null)
 
   return (
-    <InputBlock title='Схема выплат рекрутеру'>
+    <InputBlock title='Схема выплат рекрутеру' required>
       <div className={styles.schemeBlock}>
         <SchemeCard
           title='100% сразу'

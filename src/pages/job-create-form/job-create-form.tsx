@@ -94,6 +94,12 @@ function JobCreateForm() {
   //   })
   // }, [])
 
+  // useEffect(() => {
+  //   api.getSkills().then(res => {
+  //     console.log(res)
+  //   })
+  // }, [])
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -101,8 +107,7 @@ function JobCreateForm() {
       behavior: 'smooth'
     })
     dispatch(ProgressBarSlice.actions.changeProgressBarSlice(1))
-    console.log(inputValues)
-  }, [inputValues])
+  }, [])
 
   function clickButtonForward() {
     dispatch(FormDataSlice.actions.addFormData(inputValues))

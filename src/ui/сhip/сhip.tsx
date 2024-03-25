@@ -24,7 +24,10 @@ const Chip: FC<IChip> = ({
   const [isActive, setActive] = useState(false)
   const isPrimary = type === 'primary'
 
-  const handleClick = () => {
+  const handleClick = (
+    event: MouseEvent<HTMLButtonElement | HTMLDivElement>
+  ) => {
+    event.preventDefault()
     isPrimary ? setActive(true) : setActive(!isActive)
     if (some && typeof activeChips === 'object') {
       const checkedInArray = activeChips.some(item => {
