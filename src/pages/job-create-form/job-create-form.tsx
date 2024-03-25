@@ -17,7 +17,7 @@ import ConditionsInput from '../../components/conditions-input/conditions-input'
 import ResponsibilitiesInput from '../../components/responsibilities-input/responsibilities-input'
 import { useForm } from '../../utils/hooks'
 import { FormDataSlice } from '../../services/slices/form-data-slice'
-// import api from '../../utils/api'
+import api from '../../utils/api'
 
 function JobCreateForm() {
   const { step } = useAppSelector(state => state.progressBar)
@@ -94,11 +94,11 @@ function JobCreateForm() {
   //   })
   // }, [])
 
-  // useEffect(() => {
-  //   api.getSkills().then(res => {
-  //     console.log(res)
-  //   })
-  // }, [])
+  useEffect(() => {
+    api.getSpecializations().then(res => {
+      console.log(res)
+    })
+  }, [])
 
   useEffect(() => {
     window.scrollTo({

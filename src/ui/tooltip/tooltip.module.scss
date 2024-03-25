@@ -1,0 +1,43 @@
+@import '../../styles/const.scss';
+@import '../../styles/mixins.scss';
+
+.tooltip {
+  min-width: 178px;;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba($color-secondary-gray, .34);
+  position: absolute;
+  z-index: 10;
+}
+
+.top {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.right {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.left {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.text {
+  @include reset-text;
+  @include text-tiny-12-400;
+  color: $color-primary-gray;
+}
