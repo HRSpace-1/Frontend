@@ -5,9 +5,15 @@ interface ITooltip {
   isActive: boolean
   text: string
   position: 'right' | 'bottom' | 'top' | 'left'
+  extraClass?: string
 }
 
-const Tooltip: FC<ITooltip> = ({ isActive = false, text, position }) => {
+const Tooltip: FC<ITooltip> = ({
+  isActive = false,
+  text,
+  position,
+  extraClass = ''
+}) => {
   const [positionClassName, setPositionClassName] = useState(null)
 
   useEffect(() => {
@@ -27,7 +33,7 @@ const Tooltip: FC<ITooltip> = ({ isActive = false, text, position }) => {
   return (
     <>
       {isActive && (
-        <div className={`${styles.tooltip} ${positionClassName}`}>
+        <div className={`${styles.tooltip} ${positionClassName} ${extraClass}`}>
           <p className={styles.text}>{text}</p>
           <div className={styles.triangle}></div>
         </div>

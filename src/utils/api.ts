@@ -29,8 +29,8 @@ class Api {
     })
   }
 
-  getSkills(): Promise<Array<string> | void> {
-    return fetch(this._baseUrl + '/directories/skills/', {
+  getJobTitle(): Promise<Array<string> | void> {
+    return fetch(this._baseUrl + '/directories/job-titles/', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
@@ -40,8 +40,8 @@ class Api {
     })
   }
 
-  getJobTitle(): Promise<Array<string> | void> {
-    return fetch(this._baseUrl + '/directories/job-titles/', {
+  getSkills(): Promise<Array<string> | void> {
+    return fetch(this._baseUrl + '/directories/skills/', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
