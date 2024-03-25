@@ -39,6 +39,7 @@ class Api {
       this._checkStatus<Array<string>>(res)
     })
   }
+
   getJobTitle(): Promise<Array<string> | void> {
     return fetch(this._baseUrl + '/directories/job-titles/', {
       method: 'GET',
@@ -49,6 +50,7 @@ class Api {
       this._checkStatus<Array<string>>(res)
     })
   }
+
   getSpecializations(): Promise<Array<string> | void> {
     return fetch(this._baseUrl + '/directories/specializations/', {
       method: 'GET',

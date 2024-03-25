@@ -12,9 +12,9 @@ const ResumeShowingDate: FC = () => {
         Когда готовы приступить к рассмотрению первых кандидатов
       </p>
       <div className={styles.chips}>
-        <Chip title='через 3 дня' type={type} />
-        <Chip title='через неделю' type={type} />
-        <Chip title='через месяц' type={type} />
+        <Chip name='resume_showing_date' title='через 3 дня' type={type} />
+        <Chip name='resume_showing_date' title='через неделю' type={type} />
+        <Chip name='resume_showing_date' title='через месяц' type={type} />
       </div>
     </InputBlock>
   )

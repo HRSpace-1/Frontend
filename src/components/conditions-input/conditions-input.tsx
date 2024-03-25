@@ -21,7 +21,6 @@ const ConditionsInput: FC<IPropsButtons> = ({ addValue }) => {
           setActiveChips={setActiveChips}
           activeChips={activeChips}
           some={true}
-          id={1}
           type={type}
         />
         <Chip
@@ -30,7 +29,6 @@ const ConditionsInput: FC<IPropsButtons> = ({ addValue }) => {
           setActiveChips={setActiveChips}
           activeChips={activeChips}
           some={true}
-          id={2}
           type={type}
         />
         <Chip
@@ -39,7 +37,6 @@ const ConditionsInput: FC<IPropsButtons> = ({ addValue }) => {
           setActiveChips={setActiveChips}
           activeChips={activeChips}
           some={true}
-          id={3}
           type={type}
         />
       </div>

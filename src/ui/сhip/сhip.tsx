@@ -8,7 +8,6 @@ interface IChip {
   type?: 'primary' | 'secondary'
   setActiveChips?: (value: any) => void
   activeChips?: any[] | string
-  id?: number
   some?: boolean
   isWorkFormat?: boolean
 }

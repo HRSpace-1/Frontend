@@ -22,7 +22,6 @@ const WorkFormatInput: FC<IPropsButtons> = ({ addValue }) => {
           setActiveChips={setActiveChips}
           activeChips={activeChips}
           some={true}
-          id={1}
           isWorkFormat
           type={type}
         />
@@ -32,7 +31,6 @@ const WorkFormatInput: FC<IPropsButtons> = ({ addValue }) => {
           setActiveChips={setActiveChips}
           activeChips={activeChips}
           some={true}
-          id={2}
           isWorkFormat
           type={type}
         />
@@ -42,7 +40,6 @@ const WorkFormatInput: FC<IPropsButtons> = ({ addValue }) => {
           setActiveChips={setActiveChips}
           activeChips={activeChips}
           some={true}
-          id={3}
           isWorkFormat
           type={type}
         />
@@ -52,7 +49,6 @@ const WorkFormatInput: FC<IPropsButtons> = ({ addValue }) => {
           setActiveChips={setActiveChips}
           activeChips={activeChips}
           some={true}
-          id={4}
           isWorkFormat
           type={type}
         />

@@ -21,7 +21,6 @@ const ExperienceJobInput: FC<IPropsButtons> = ({ addValue }) => {
           setActiveChips={setActiveChips}
           activeChips={activeChips}
           some={false}
-          id={1}
           type={type}
         />
         <Chip
@@ -30,7 +29,6 @@ const ExperienceJobInput: FC<IPropsButtons> = ({ addValue }) => {
           setActiveChips={setActiveChips}
           activeChips={activeChips}
           some={false}
-          id={2}
           type={type}
         />
         <Chip
@@ -39,7 +37,6 @@ const ExperienceJobInput: FC<IPropsButtons> = ({ addValue }) => {
           setActiveChips={setActiveChips}
           activeChips={activeChips}
           some={false}
-          id={3}
           type={type}
         />
         <Chip
@@ -48,7 +45,6 @@ const ExperienceJobInput: FC<IPropsButtons> = ({ addValue }) => {
           setActiveChips={setActiveChips}
           activeChips={activeChips}
           some={false}
-          id={4}
           type={type}
         />
         <Chip
@@ -57,7 +53,6 @@ const ExperienceJobInput: FC<IPropsButtons> = ({ addValue }) => {
           setActiveChips={setActiveChips}
           activeChips={activeChips}
           some={false}
-          id={5}
           type={type}
         />
       </div>

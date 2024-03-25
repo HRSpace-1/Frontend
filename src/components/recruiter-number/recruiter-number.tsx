@@ -19,7 +19,6 @@ const RecruiterNumber: FC = () => {
           type={type}
           activeChips={activeChips}
           setActiveChips={setActiveChips}
-          id={1}
           name='1'
         />
         <Chip
@@ -27,7 +26,6 @@ const RecruiterNumber: FC = () => {
           type={type}
           activeChips={activeChips}
           setActiveChips={setActiveChips}
-          id={1}
           name='2'
         />
         <Chip
@@ -35,7 +33,6 @@ const RecruiterNumber: FC = () => {
           type={type}
           activeChips={activeChips}
           setActiveChips={setActiveChips}
-          id={1}
           name='3'
         />
       </div>

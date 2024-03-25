@@ -21,7 +21,6 @@ const TypeEmploymentInput: FC<IPropsButtons> = ({ addValue }) => {
           name='full_time'
           activeChips={activeChips}
           setActiveChips={setActiveChips}
-          id={1}
           some={true}
           type={type}
         />
@@ -30,7 +29,6 @@ const TypeEmploymentInput: FC<IPropsButtons> = ({ addValue }) => {
           name='"part_time'
           activeChips={activeChips}
           setActiveChips={setActiveChips}
-          id={2}
           some={true}
           type={type}
         />
@@ -39,7 +37,6 @@ const TypeEmploymentInput: FC<IPropsButtons> = ({ addValue }) => {
           name='project_activities'
           activeChips={activeChips}
           setActiveChips={setActiveChips}
-          id={3}
           some={true}
           type={type}
         />

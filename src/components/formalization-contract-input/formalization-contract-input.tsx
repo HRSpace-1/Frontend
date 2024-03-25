@@ -21,7 +21,6 @@ const FormalizationContractInput: FC<IPropsButtons> = ({ addValue }) => {
         <Chip
           title='полное оформление'
           name='full_registration'
-          id={1}
           activeChips={activeChips}
           setActiveChips={setActiveChips}
           some={false}
@@ -30,7 +29,6 @@ const FormalizationContractInput: FC<IPropsButtons> = ({ addValue }) => {
         <Chip
           title='срочный договор'
           name='fixed_term'
-          id={2}
           activeChips={activeChips}
           setActiveChips={setActiveChips}
           some={false}
@@ -39,7 +37,6 @@ const FormalizationContractInput: FC<IPropsButtons> = ({ addValue }) => {
         <Chip
           title='ГПХ'
           name='gph'
-          id={3}
           activeChips={activeChips}
           setActiveChips={setActiveChips}
           some={false}

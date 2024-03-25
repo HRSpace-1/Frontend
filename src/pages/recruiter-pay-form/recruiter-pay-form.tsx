@@ -32,7 +32,11 @@ function RecruiterPayForm() {
         text='Выберите удобный способ выплат за услуги рекрутера. Мы предлагаем три варианты оплаты для вашего удобства.'
         step={step}
       />
-      <Form title={'Вознаграждение рекрутера'} step={step}>
+      <Form
+        title={'Вознаграждение рекрутера'}
+        step={step}
+        clickButtonForward={() => {}}
+      >
         <FinishPayInfo />
         <div className={styles.container}>
           <div className={styles.employeePayInput}>

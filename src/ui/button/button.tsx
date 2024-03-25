@@ -19,7 +19,7 @@ const Button: FC<IButton> = ({
   action = '',
   style,
   step,
-  clickButtonForward,
+  clickButtonForward = () => {},
   extraClass
 }) => {
   const navigate = useNavigate()
