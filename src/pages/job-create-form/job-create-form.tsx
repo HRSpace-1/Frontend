@@ -21,31 +21,6 @@ import api from '../../utils/api'
 
 function JobCreateForm() {
   const { step } = useAppSelector(state => state.progressBar)
-  // const {
-  //   title,
-  //   company_specialization,
-  //   address,
-  //   experience,
-  //   salary_from,
-  //   salary_up_to,
-  //   paperwork,
-  //   responsibilities,
-  //   requirements,
-  //   payment,
-  //   terms_payment,
-  //   recruiters_number,
-  //   resume_showing_date,
-  //   desired_release_date,
-  //   recruiter_responsibilities,
-  //   resume_type,
-  //   terms_recruiter,
-  //   stop_list_employee,
-  //   id,
-  //   conditions,
-  //   skills,
-  //   work_format,
-  //   employment
-  // } = useAppSelector(state => state.formData)
   const dispatch = useAppDispatch()
 
   const { inputValues, handleChange, addValue } = useForm({
@@ -61,38 +36,6 @@ function JobCreateForm() {
     conditions: null,
     responsibilities: null
   })
-
-  // test
-  // useEffect(() => {
-  //   const obj = {
-  //     title,
-  //     company_specialization,
-  //     address,
-  //     experience,
-  //     salary_from,
-  //     salary_up_to,
-  //     paperwork,
-  //     responsibilities,
-  //     requirements,
-  //     payment,
-  //     terms_payment,
-  //     recruiters_number,
-  //     resume_showing_date,
-  //     desired_release_date,
-  //     recruiter_responsibilities,
-  //     resume_type,
-  //     terms_recruiter,
-  //     stop_list_employee,
-  //     id,
-  //     conditions,
-  //     skills,
-  //     work_format,
-  //     employment
-  //   }
-  //   api.postApplication(obj).then(res => {
-  //     console.log(res)
-  //   })
-  // }, [])
 
   useEffect(() => {
     api.getJobTitle().then(res => {
