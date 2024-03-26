@@ -14,7 +14,6 @@ const StopListSwitch: FC = () => {
       isChecked={isChecked}
       handleToggle={() => {
         setIsChecked(!isChecked)
-        console.log('isChecked: ', isChecked)
       }}
     >
       {isChecked && (

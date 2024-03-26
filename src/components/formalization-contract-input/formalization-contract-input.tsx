@@ -12,9 +12,6 @@ const FormalizationContractInput: FC<IPropsButtons> = ({ addValue }) => {
     addValue('paperwork', activeChips)
   }, [activeChips])
 
-  useEffect(() => {
-    console.log(addValue)
-  }, [])
   return (
     <InputBlock title='Оформление'>
       <div className={styles.chips}>
