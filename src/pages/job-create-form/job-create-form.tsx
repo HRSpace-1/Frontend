@@ -75,7 +75,7 @@ function JobCreateForm() {
         clickButtonForward={clickButtonForward}
       >
         <InputsSample />
-        <NameVacancyInput addValue={addValue} />
+        <NameVacancyInput handleChange={handleChange} />
         <ProfessionalSkillsInput addValue={addValue} />
         <CompanyIndustryInput addValue={addValue} />
         <WorkFormatInput addValue={addValue} />

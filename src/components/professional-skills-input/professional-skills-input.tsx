@@ -42,15 +42,12 @@ const ProfessionalSkillsInput: FC<IPropsButtons> = ({ addValue }) => {
   }
 
   return (
-    <InputBlock
-      title='Профессиональные навыки'
-      extraClass={styles.input}
-      required
-    >
+    <InputBlock title='Профессиональные навыки' required>
       <Input
         placeholder='Необходимые навыки кандидата'
         handleChange={handleChange}
         handleKeyDownEnter={handleKeyDownEnter}
+        extraClass={styles.input}
       />
       <div
         className={`${styles.chips} ${arrChipsName.length > 0 && styles.chipsActive}`}

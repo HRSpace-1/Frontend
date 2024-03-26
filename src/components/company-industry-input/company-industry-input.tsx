@@ -33,11 +33,12 @@ const CompanyIndustryInput: FC<IPropsButtons> = ({ addValue }) => {
   }
 
   return (
-    <InputBlock title='Отрасль компании' extraClass={styles.input}>
+    <InputBlock title='Отрасль компании'>
       <Input
         placeholder='Направление бизнеса'
         handleChange={handleChange}
         handleKeyDownEnter={handleKeyDownEnter}
+        extraClass={styles.input}
       />
       <div
         className={`${styles.chips} ${specializationValue !== null && styles.chipsActive}`}
