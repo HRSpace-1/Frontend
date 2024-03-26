@@ -1,4 +1,4 @@
-import { FC, MouseEvent, useState } from 'react'
+import { FC, MouseEvent, useEffect, useState } from 'react'
 import IconClose from '../../images/icons/close.svg'
 import styles from './сhip.module.scss'
 
@@ -23,6 +23,16 @@ const Chip: FC<IChip> = ({
 }) => {
   const [isActive, setActive] = useState(false)
   const isPrimary = type === 'primary'
+
+  useEffect(() => {
+    if (activeChips === name && some === false) {
+      setActive(true)
+    }
+
+    if (activeChips !== name && some === false) {
+      setActive(false)
+    }
+  }, [activeChips])
 
   const handleClick = (
     event: MouseEvent<HTMLButtonElement | HTMLDivElement>
@@ -63,9 +73,7 @@ const Chip: FC<IChip> = ({
       }
 
       if (activeChips !== name && activeChips !== null) {
-        console.log('!')
-        setActive(false)
-        // setActive(true)
+        setActiveChips(name)
       }
     }
   }
