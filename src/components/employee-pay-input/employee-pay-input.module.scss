@@ -15,10 +15,10 @@
   border-radius: 8px;
   border: none;
   padding: 10px 12px;
-  color: rgb(23, 133, 229);
+  color: $color-primary-blue;
   background-color: $color-secondary-blue;
   &:hover {
-    box-shadow: 0px 0px 10px 0px rgba(186, 189, 191, 0.34);
+    box-shadow: 0px 0px 10px 0px rgba($color-secondary-gray, .34);
   }
   cursor: pointer;
   position: relative;

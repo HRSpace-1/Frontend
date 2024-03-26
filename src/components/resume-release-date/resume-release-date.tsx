@@ -1,6 +1,7 @@
 import styles from './resume-release-date.module.scss'
 import { FC } from 'react'
 import InputBlock from '../input-block/input-block'
+import Datepicker from '../../ui/datepicker/datepicker'
 import Chip from '../../ui/сhip/сhip'
 
 const ResumeReleaseDate: FC = () => {
@@ -13,7 +14,7 @@ const ResumeReleaseDate: FC = () => {
         доплату
       </p>
       <div className={styles.chips}>
-        {/* desired_release_date */}
+        <Datepicker />
         <Chip name='week-later' title='через неделю' type={type} />
         <Chip name='in-two-weeks' title='через 2 недели' type={type} />
         <Chip name='month-later' title='через месяц' type={type} />

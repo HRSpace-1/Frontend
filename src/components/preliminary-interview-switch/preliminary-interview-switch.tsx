@@ -7,9 +7,10 @@ const PreliminaryInterviewSwitch: FC = () => {
 
   return (
     <SwitchBlock
+      name='resume_type'
       title='Рекрутер проводит предварительное интервью'
       isChecked={isChecked}
-      setIsChecked={setIsChecked}
+      handleToggle={() => setIsChecked(!isChecked)}
     >
       <p className={styles.text}>
         Резюме предоставляется с комментариями от рекрутера

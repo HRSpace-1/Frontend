@@ -35,6 +35,7 @@ const Chip: FC<IChip> = ({
       })
 
       if (checkedInArray === false) {
+        console.log('false')
         if (isWorkFormat) {
           setActiveChips([...activeChips, { title: name }])
         } else {
@@ -43,6 +44,7 @@ const Chip: FC<IChip> = ({
       }
 
       if (checkedInArray === true) {
+        console.log('true')
         setActive(false)
         const newActiveChips = activeChips.filter(item => {
           return item.name !== name
@@ -58,6 +60,7 @@ const Chip: FC<IChip> = ({
       }
 
       if (activeChips === name) {
+        console.log(name)
         setActiveChips(null)
         setActive(false)
       }

@@ -8,9 +8,10 @@ const AdditionalCommentsSwitch: FC = () => {
 
   return (
     <SwitchBlock
+      name='comments'
       title='Дополнительные комментарии'
       isChecked={isChecked}
-      setIsChecked={setIsChecked}
+      handleToggle={() => setIsChecked(!isChecked)}
     >
       {isChecked && (
         <Input

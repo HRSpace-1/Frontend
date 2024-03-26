@@ -96,13 +96,13 @@ function JobCreateForm() {
 
   useEffect(() => {
     api.getJobTitle().then(res => {
-      console.log(res)
+      console.log('res jobs: ', res)
     })
     api.getSkills().then(res => {
-      console.log(res)
+      console.log('res skills: ', res)
     })
     api.getSpecializations().then(res => {
-      console.log(res)
+      console.log('res specs: ', res)
     })
   }, [])
 
@@ -132,7 +132,7 @@ function JobCreateForm() {
         clickButtonForward={clickButtonForward}
       >
         <InputsSample />
-        <NameVacancyInput handleChange={handleChange} />
+        <NameVacancyInput addValue={addValue} />
         <ProfessionalSkillsInput addValue={addValue} />
         <CompanyIndustryInput addValue={addValue} />
         <WorkFormatInput addValue={addValue} />

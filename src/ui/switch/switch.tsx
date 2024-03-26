@@ -2,27 +2,25 @@ import { FC } from 'react'
 import styles from './switch.module.scss'
 
 interface ISwitch {
+  name?: string
   isChecked: boolean
-  setIsChecked: React.Dispatch<boolean>
+  handleToggle: () => void
 }
 
-const Switch: FC<ISwitch> = ({ isChecked, setIsChecked }) => {
-  const handleToggle = () => {
-    setIsChecked(!isChecked)
-  }
-
+const Switch: FC<ISwitch> = ({ name, isChecked, handleToggle }) => {
   return (
     <>
       <input
+        id={name}
         className={styles.checkbox}
-        id='switch'
+        name={name}
         type='checkbox'
         checked={isChecked}
         onChange={handleToggle}
       />
       <label
         className={styles.label}
-        htmlFor='switch'
+        htmlFor={name}
         style={{ background: isChecked && '#1785e5' }}
       >
         <span className={styles.button} />

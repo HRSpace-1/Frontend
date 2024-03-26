@@ -8,10 +8,14 @@ const StopListSwitch: FC = () => {
 
   return (
     <SwitchBlock
+      name='stoplist'
       title='Стоп-лист сотрудников'
       extraClass={styles.container}
       isChecked={isChecked}
-      setIsChecked={setIsChecked}
+      handleToggle={() => {
+        setIsChecked(!isChecked)
+        console.log('isChecked: ', isChecked)
+      }}
     >
       {isChecked && (
         <Input

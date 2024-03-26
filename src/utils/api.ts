@@ -1,5 +1,9 @@
 import { IFormDataRequiredState, IFormDataResponseApi } from './types'
 
+// export interface IJobTitles {
+//   job_titles: string[]
+// }
+
 class Api {
   private _baseUrl: string
 
@@ -9,7 +13,7 @@ class Api {
 
   _checkStatus<T>(res: Response): Promise<T> {
     if (res.ok) {
-      return res.json()
+      return res.json() as Promise<T>
     }
 
     return Promise.reject(`Ошибка: ${res.status}`)
@@ -36,7 +40,7 @@ class Api {
         'Content-Type': 'application/json'
       }
     }).then(res => {
-      this._checkStatus<Array<string>>(res)
+      return this._checkStatus<Array<string>>(res)
     })
   }
 
@@ -47,7 +51,7 @@ class Api {
         'Content-Type': 'application/json'
       }
     }).then(res => {
-      this._checkStatus<Array<string>>(res)
+      return this._checkStatus<Array<string>>(res)
     })
   }
 
@@ -58,7 +62,7 @@ class Api {
         'Content-Type': 'application/json'
       }
     }).then(res => {
-      this._checkStatus<Array<string>>(res)
+      return this._checkStatus<Array<string>>(res)
     })
   }
 }
