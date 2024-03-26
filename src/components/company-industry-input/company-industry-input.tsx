@@ -24,10 +24,6 @@ const CompanyIndustryInput: FC<IPropsButtons> = ({ addValue }) => {
     setInputValue(value)
   }
 
-  useEffect(() => {
-    console.log(addValue)
-  }, [])
-
   function handleDelete() {
     setSpecializationValue(null)
   }

@@ -26,6 +26,7 @@ const RecruiterNumber: FC<IPropsButtons> = ({ addValue }) => {
           activeChips={activeChips}
           setActiveChips={setActiveChips}
           name='1'
+          some={false}
         />
         <Chip
           title='2'
@@ -33,6 +34,7 @@ const RecruiterNumber: FC<IPropsButtons> = ({ addValue }) => {
           activeChips={activeChips}
           setActiveChips={setActiveChips}
           name='2'
+          some={false}
         />
         <Chip
           title='3'
@@ -40,6 +42,7 @@ const RecruiterNumber: FC<IPropsButtons> = ({ addValue }) => {
           activeChips={activeChips}
           setActiveChips={setActiveChips}
           name='3'
+          some={false}
         />
       </div>
     </InputBlock>
