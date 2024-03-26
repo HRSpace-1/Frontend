@@ -8,7 +8,9 @@ SPA от фронтенда 1 команды ХАКАТОН+ по задаче �
 
 [**Макет Figma**](https://www.figma.com/file/8ITrtxsKsmu0HP9Z5OHDwI/%D0%A5%D0%B0%D0%BA%D0%B0%D1%82%D0%BE%D0%BD%2FHRSpace%2F%D0%9A%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0-1?type=design&node-id=11%3A986&mode=design&t=YD2OYTn5p0pkl8NI-1)
 
-[**Ссылка на скриншоты и билд (Яндекс Диск)**]()
+[**Ссылка на билд (Яндекс Диск)**](https://disk.yandex.ru/d/NsM41KUFOeSkew)
+
+[**Ссылка на скриншоты (Яндекс Диск)**](https://disk.yandex.ru/d/UPWaK4SquyiRNQ)
 
 ## Authors
 
