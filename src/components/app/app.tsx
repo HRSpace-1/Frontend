@@ -9,7 +9,7 @@ export default function App() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    navigate('/vacancy')
+    navigate('/conditions')
   }, [])
 
   return (
