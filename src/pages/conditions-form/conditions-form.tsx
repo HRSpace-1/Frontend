@@ -30,14 +30,13 @@ function ConditionsForm() {
   })
 
   useEffect(() => {
-    console.log(inputValues)
     window.scrollTo({
       top: 0,
       left: 0,
       behavior: 'smooth'
     })
     dispatch(ProgressBarSlice.actions.changeProgressBarSlice(3))
-  }, [pathname, inputValues])
+  }, [pathname])
 
   function clickButtonForward() {
     dispatch(FormDataSlice.actions.addFormData(inputValues))

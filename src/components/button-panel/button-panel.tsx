@@ -18,6 +18,7 @@ const ButtonPanel: FC<IButtonPanel> = ({ step, clickButtonForward }) => {
 
   const handleClickPublish = () => {
     setIsPublished(!isPublished)
+    clickButtonForward()
   }
 
   return (
