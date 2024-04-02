@@ -21,11 +21,12 @@ function ConditionsForm() {
   const { step } = useAppSelector(state => state.progressBar)
   const dispatch = useAppDispatch()
 
-  const { inputValues, addValue } = useForm({
+  const { inputValues, addValue, handleChange } = useForm({
     recruiters_number: 0,
     resume_showing_date: null,
     desired_release_date: null,
-    recruiter_responsibilities: null
+    recruiter_responsibilities: null,
+    stop_list_employee: ''
   })
 
   useEffect(() => {
@@ -61,7 +62,7 @@ function ConditionsForm() {
         <JobDuties addValue={addValue} />
         <PreliminaryInterviewSwitch />
         <AdditionalCommentsSwitch />
-        <StopListSwitch />
+        <StopListSwitch handleChange={handleChange} />
       </Form>
     </div>
   )

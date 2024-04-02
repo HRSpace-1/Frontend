@@ -2,8 +2,9 @@ import styles from './stop-list-switch.module.scss'
 import { FC, useState } from 'react'
 import SwitchBlock from '../switch-block/switch-block'
 import Input from '../../ui/input/input'
+import { IPropsInputs } from '../../utils/types'
 
-const StopListSwitch: FC = () => {
+const StopListSwitch: FC<IPropsInputs> = ({ handleChange }) => {
   const [isChecked, setIsChecked] = useState(false)
 
   return (
@@ -20,6 +21,8 @@ const StopListSwitch: FC = () => {
         <Input
           placeholder='Укажите, кто входит в стоп-лист'
           isTextaria={true}
+          name='stop_list_employee'
+          handleChange={handleChange}
           extraClass={styles.textarea}
         />
       )}

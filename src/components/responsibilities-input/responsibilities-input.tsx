@@ -13,6 +13,7 @@ const ResponsibilitiesInput: FC<IPropsInputs> = ({ handleChange }) => {
       <Input
         placeholder='Опишите подробнее вакансию'
         // extraClass={styles.inputPrice}
+        name='responsibilities_requirements'
         handleChange={handleChange}
         isTextaria={true}
         extraClass={styles.textarea}
