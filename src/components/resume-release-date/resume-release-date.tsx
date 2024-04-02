@@ -1,12 +1,21 @@
 import styles from './resume-release-date.module.scss'
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import InputBlock from '../input-block/input-block'
 import Datepicker from '../../ui/datepicker/datepicker'
 import Chip from '../../ui/сhip/сhip'
+import { IPropsButtons } from '../../utils/types'
 
-const ResumeReleaseDate: FC = () => {
+const ResumeReleaseDate: FC<IPropsButtons> = ({ addValue }) => {
   const [activeChips, setActiveChips] = useState(null)
+  const [date, setDate] = useState(null)
   const type = 'secondary'
+
+  useEffect(() => {
+    if (date !== null) {
+      const newDate = `${date.inputYear}-${date.inputMonth}-${date.inputDay}T10:57:21.898Z`
+      addValue('desired_release_date', newDate)
+    }
+  }, [date])
 
   return (
     <InputBlock title='Желаемая дата выхода' extraClass='smallMargin'>
@@ -15,7 +24,7 @@ const ResumeReleaseDate: FC = () => {
         доплату
       </p>
       <div className={styles.chips}>
-        <Datepicker />
+        <Datepicker setDate={setDate} />
         <Chip
           name='week-later'
           title='через неделю'

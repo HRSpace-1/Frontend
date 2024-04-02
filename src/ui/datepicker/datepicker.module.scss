@@ -12,6 +12,12 @@
   border: none;
   border-bottom: 1px solid gray;
   outline: none;
+  font-size: 14px;
+}
+
+.input::-webkit-inner-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 .inputYeat {

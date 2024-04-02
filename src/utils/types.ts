@@ -146,3 +146,9 @@ export interface IPropsButtons {
       | null
   ) => void
 }
+
+export interface IDate {
+  inputDay: number | null
+  inputMonth: number | null
+  inputYear: number | null
+}

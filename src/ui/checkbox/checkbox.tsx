@@ -1,16 +1,38 @@
 import styles from './checkbox.module.scss'
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 
 interface ICheckbox {
   label: string
+  setRecruiterResponsibilities: React.Dispatch<any>
+  recruiterResponsibilities: Array<string> | null
 }
 
-const Checkbox: FC<ICheckbox> = ({ label, ...props }) => {
+const Checkbox: FC<ICheckbox> = ({
+  label,
+  setRecruiterResponsibilities,
+  recruiterResponsibilities
+}) => {
   const [isChecked, setIsChecked] = useState(false)
 
   const handleChange = () => {
     setIsChecked(!isChecked)
   }
+
+  useEffect(() => {
+    if (isChecked === true && recruiterResponsibilities === null) {
+      setRecruiterResponsibilities([label])
+    }
+    if (isChecked === true && recruiterResponsibilities !== null) {
+      setRecruiterResponsibilities([...recruiterResponsibilities, label])
+    }
+    if (isChecked === false && recruiterResponsibilities !== null) {
+      const newArray = recruiterResponsibilities.filter(item => {
+        return item !== label
+      })
+
+      setRecruiterResponsibilities(newArray)
+    }
+  }, [isChecked])
 
   return (
     <label className={styles.container}>
@@ -20,7 +42,7 @@ const Checkbox: FC<ICheckbox> = ({ label, ...props }) => {
           checked={isChecked}
           onChange={handleChange}
           className={styles.checkbox}
-          {...props}
+          value={label}
         />
       </span>
       <p className={styles.label}>{label}</p>

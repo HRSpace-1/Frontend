@@ -22,17 +22,21 @@ function ConditionsForm() {
   const dispatch = useAppDispatch()
 
   const { inputValues, addValue } = useForm({
-    recruiters_number: 0
+    recruiters_number: 0,
+    resume_showing_date: null,
+    desired_release_date: null,
+    recruiter_responsibilities: null
   })
 
   useEffect(() => {
+    console.log(inputValues)
     window.scrollTo({
       top: 0,
       left: 0,
       behavior: 'smooth'
     })
     dispatch(ProgressBarSlice.actions.changeProgressBarSlice(3))
-  }, [pathname])
+  }, [pathname, inputValues])
 
   function clickButtonForward() {
     dispatch(FormDataSlice.actions.addFormData(inputValues))
@@ -52,9 +56,9 @@ function ConditionsForm() {
       >
         <InputsSample />
         <RecruiterNumber addValue={addValue} />
-        <ResumeShowingDate />
-        <ResumeReleaseDate />
-        <JobDuties />
+        <ResumeShowingDate addValue={addValue} />
+        <ResumeReleaseDate addValue={addValue} />
+        <JobDuties addValue={addValue} />
         <PreliminaryInterviewSwitch />
         <AdditionalCommentsSwitch />
         <StopListSwitch />
